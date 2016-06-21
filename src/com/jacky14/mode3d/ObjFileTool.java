@@ -28,9 +28,9 @@ public class ObjFileTool {
       ol.loadStrforInput(new FileInputStream("C:\\Users\\Administrator\\Desktop\\zxcxzc.obj")) ;
       
       String str = "";
-      for(int i=0;i<ol.vertexlist.size();i++){
+      /*for(int i=0;i<ol.vertexlist.size();i++){
     	  str+= "("+ ol.vertexlist.get(i) +"),";
-      }
+      }*/
       System.out.println(str);
       String str1 = "";
       for(int i=0;i<ol.Indexlist.size();i++){

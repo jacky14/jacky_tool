@@ -7,7 +7,10 @@ import java.io.IOException;
  */
 public class StartTool {
     public static void main(String [] arg) throws IOException {
-        Runtime.getRuntime().exec("E:\\cocos2d\\cocos2dproject\\jackyXUiTool\\runtime\\jackyXUiTool.exe");
+    	//"E:\\cocos2d\\cocos2dproject\\jackyXUiTool\\runtime\\jackyXUiTool.exe"   y470
+    	//D:\\cocosPro\\cocos310js\\cocos310js.exe
+    	
+        Runtime.getRuntime().exec("D:\\cocosPro\\cocos310js\\cocos310js.exe");
         //System.out.print(180/Math.PI);
 
     }
