@@ -1,16 +1,15 @@
 package com.third.sometool2015;
-import java.io.IOException;
 import java.io.OutputStream;
 import java.util.Scanner;
 
-
+/**
+ * 辅助adbi 钩子注入程序，无需手动输入注入命令 只需填写包名后 精准快捷的自动执行钩子命令
+ * @author Administrator
+ *
+ */
 public class AdbShell {
 	public static String id ="";
-	//air.com.aschord.goldflower 炸金花高手
-	//air.com.igs.SICBO 甜心股宝
-	//com.android.fileexplorer:remote   赛马_etrnalsimulato
 	public static String packname="air.com.igs.SICBO";
-	
 	//https://play.google.com/store/apps/details?id=air.com.igs.SICBO
 	
 	/**
