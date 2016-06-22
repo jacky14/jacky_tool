@@ -16,8 +16,8 @@ public class ImageSplit {
 	//切割后生成小图的文件的路径
 	public static String outpath = "C:\\Users\\Administrator\\Desktop\\outimg\\";
 	//切割的小图的大小
-	public static int f_h = 200;
-	public static int f_w = 100;
+	public static int f_h = 134;
+	public static int f_w = 120;
 	
 	public static String []fhz = new String[]{"jpg","png"};
 	public static void main(String[] args) throws Exception {
