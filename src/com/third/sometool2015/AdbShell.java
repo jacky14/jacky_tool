@@ -9,8 +9,12 @@ import java.util.Scanner;
  */
 public class AdbShell {
 	public static String id ="";
-	public static String packname="air.com.igs.SICBO";
+	public static String packname="com.jackylua.ts3d";
 	//https://play.google.com/store/apps/details?id=air.com.igs.SICBO
+	//adb pull /data/local/tmp/adbi_example.log  d:/
+	
+	/*ndk-build;
+	adb push libs/armeabi/libexample.so /data/local/tmp/*/
 	
 	/**
 	 * @param args
@@ -22,7 +26,7 @@ public class AdbShell {
 		
 		long time = System.currentTimeMillis();
 		
-		while(test){
+		while(test){                                 //my_jackytest
 			long cu = System.currentTimeMillis();
 			long sel = cu - time;
 			if(sel<300){
@@ -32,12 +36,12 @@ public class AdbShell {
 			chick();
 			if(id.trim().length()>0){
 				test = false;
-				//Thread.sleep(500);
+				Thread.sleep(300);
 				hack() ;
 			}
 		}
 	}
-	
+	//./hijack -d -p 4442 -l /data/local/tmp/libexample.so
 	public static void hack() throws Exception{
 		Process p  = Runtime.getRuntime().exec(" adb shell \r");
 		OutputStream out =  p.getOutputStream();
@@ -50,6 +54,8 @@ public class AdbShell {
 		Scanner sc = new Scanner(p.getInputStream());
 		while(sc.hasNext()){
 			System.out.println(sc.nextLine());
+			
+			
 		}
 		sc.close();
 	}
