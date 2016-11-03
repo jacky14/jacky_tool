@@ -3,7 +3,7 @@ package dev.mouse.io;
 import java.io.IOException;
 import java.io.InputStream;
 /**
- * ∂¡»°
+ * ËØªÂèñ
  * @author DEVILIVED
  *
  */

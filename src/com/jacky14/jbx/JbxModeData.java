@@ -14,25 +14,25 @@ public class JbxModeData {
     public static String path = "C:\\Users\\Administrator\\Desktop\\tmp\\";
     public static String suffix = ".jxb";
     /**
-     * ¶¥µã
+     * é¡¶ç‚¹
      */
     public float[] verts;
     /**
-     * ÎÆÀí×ø±ê
+     * çº¹ç†åæ ‡
      */
     public float[] uvs;
     /**
-     * ¶¥µãË÷Òı
+     * é¡¶ç‚¹ç´¢å¼•
      */
     public int[] v_index;
 
     /**
-     * ¶¥µã¶ÔÓ¦µÄ¹Ç÷ÀĞÅÏ¢
+     * é¡¶ç‚¹å¯¹åº”çš„éª¨éª¼ä¿¡æ¯
      */
     public float [] bones;
 
     /**
-     * Éú³ÉjbxÄ£ĞÍÎÄ¼şµÄÎÄ¼ş¼Ğ
+     * ç”Ÿæˆjbxæ¨¡å‹æ–‡ä»¶çš„æ–‡ä»¶å¤¹
      * @param fileName
      */
     public void genFile(String fileName) throws IOException {

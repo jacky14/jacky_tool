@@ -8,16 +8,16 @@ public class MaxFiletmp {
 	public List<Float> uv = new ArrayList<Float>(); 
 	public List<Integer> face = new ArrayList<Integer>();
 	
-	public List<Integer> bone_id = new ArrayList<Integer>();//¶¥µã¶ÔÓ¦¹Ç÷ÀË÷Òı
-	public List<Bone> bones = new ArrayList<Bone>();//¹Ç÷ÀÁĞ±í
-	public List<Farme> farmes = new ArrayList<Farme>();//¶¯»­Êı¾İÁĞ±í 
+	public List<Integer> bone_id = new ArrayList<Integer>();//é¡¶ç‚¹å¯¹åº”éª¨éª¼ç´¢å¼•
+	public List<Bone> bones = new ArrayList<Bone>();//éª¨éª¼åˆ—è¡¨
+	public List<Farme> farmes = new ArrayList<Farme>();//åŠ¨ç”»æ•°æ®åˆ—è¡¨ 
 	
 	
 	
 	
 	
 	
-	//±£´æÎª3dmax¿É¶ÁÈ¡Êı¾İÎÄ¼ş  mectel1.0.6.jar
+	//ä¿å­˜ä¸º3dmaxå¯è¯»å–æ•°æ®æ–‡ä»¶  mectel1.0.6.jar
 	public void save(String path){
 		
 	}

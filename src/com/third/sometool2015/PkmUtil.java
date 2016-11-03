@@ -74,7 +74,7 @@ public class PkmUtil {
 			tmp[0] = -119;
 			File fdd = new File(outpath +file.getName() );
 			if(fdd.exists()){
-				System.out.println("³öÏÖÖØÃûÎÄ¼ş£º"+file.getName());
+				System.out.println("å‡ºç°é‡åæ–‡ä»¶ï¼š"+file.getName());
 				fdd = new File(outpath +file.getName()+"_1" );
 			}
 			fdd.createNewFile();

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /*
- * ¸ù¾İ3dmaxÕâ¸ö½Å±¾ÖĞÕâ¸ö½á¹¹´´½¨Õâ¸öÀà
+ * æ ¹æ®3dmaxè¿™ä¸ªè„šæœ¬ä¸­è¿™ä¸ªç»“æ„åˆ›å»ºè¿™ä¸ªç±»
  * struct LXMAT
 (
     Id,     tex,    col,    amb,    dif,    spec,   emis,   opac,   opt,    twoside
@@ -21,7 +21,7 @@ import java.util.List;
 
 
 /**
- * ½âÎö.skcÎÄ¼şÖĞ²ÄÖÊĞÅÏ¢
+ * è§£æ.skcæ–‡ä»¶ä¸­æè´¨ä¿¡æ¯
  * @author Administrator
  */
 public class LXmat {

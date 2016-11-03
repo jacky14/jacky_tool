@@ -1,6 +1,6 @@
 package dev.mouse.lib;
 /**
- * Чш±к
+ * еќђж ‡
  * @author DEVILIVED
  *
  */

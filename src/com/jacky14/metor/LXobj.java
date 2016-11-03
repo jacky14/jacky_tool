@@ -94,9 +94,9 @@ public class LXobj {
 				int oldmatid0 = vertexs[triangles[index_tri].v_index[0]].matid,oldmatid1 = vertexs[triangles[index_tri].v_index[1]].matid,oldmatid2 = vertexs[triangles[index_tri].v_index[2]].matid;
 
 				if((oldmatid0!=-1&& oldmatid0 != triangles[index_tri].mat_index)||(oldmatid1!=-1&& oldmatid1 != triangles[index_tri].mat_index)||  (oldmatid2!=-1&& oldmatid2 != triangles[index_tri].mat_index)){
-					System.out.println("ÕâÀïËÆºõ³öÏÖÁËÎÊÌâ£¬Ò»¸ö¶¥µã¶ÔÓ¦2¸ö²»Í¬µÄÎÆÀí£¿£¿£¿£¿£¿£¿");
+					System.out.println("è¿™é‡Œä¼¼ä¹å‡ºç°äº†é—®é¢˜ï¼Œä¸€ä¸ªé¡¶ç‚¹å¯¹åº”2ä¸ªä¸åŒçš„çº¹ç†ï¼Ÿï¼Ÿï¼Ÿï¼Ÿï¼Ÿï¼Ÿ");
 				}
-				//ÎªÃ¿Ò»¸ö¶¥µã¼ÇÂ¼¶ÔÓ¦²ÄÖÊĞÅÏ¢
+				//ä¸ºæ¯ä¸€ä¸ªé¡¶ç‚¹è®°å½•å¯¹åº”æè´¨ä¿¡æ¯
 				vertexs[triangles[index_tri].v_index[0]].matid = triangles[index_tri].mat_index;
 				vertexs[triangles[index_tri].v_index[1]].matid = triangles[index_tri].mat_index;
 				vertexs[triangles[index_tri].v_index[2]].matid = triangles[index_tri].mat_index;

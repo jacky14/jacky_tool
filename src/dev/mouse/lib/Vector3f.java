@@ -2,13 +2,13 @@ package dev.mouse.lib;
 
 
 /**
- * ÏòÁ¿
+ * å‘é‡
  * @author DEVILIVED
  *
  */
 public class Vector3f {
 
-	private float[] coord = new float[3];	//×ø±ê
+	private float[] coord = new float[3];	//åæ ‡
 	
 	
 	public Vector3f() {
@@ -20,7 +20,7 @@ public class Vector3f {
 		this.coord[2] = z;
 	}
 	/**
-	 * Õª×Ô±ğÈËµÄ´úÂë
+	 * æ‘˜è‡ªåˆ«äººçš„ä»£ç 
 	 * @param v1
 	 * @param v2
 	 * @param alpha
@@ -32,7 +32,7 @@ public class Vector3f {
 	}
 	
 	/**
-	 * v1 µã³Ë v2ºó¸³Öµ¸øµ±Ç°¶ÔÏó
+	 * v1 ç‚¹ä¹˜ v2åèµ‹å€¼ç»™å½“å‰å¯¹è±¡
 	 * @param v1
 	 * @param v2
 	 * @return this
@@ -44,7 +44,7 @@ public class Vector3f {
 		return this;
 	}
 	/**
-	 *µ±Ç°¶ÔÏóµã³Ë v
+	 *å½“å‰å¯¹è±¡ç‚¹ä¹˜ v
 	 * @param v
 	 * @return this
 	 */
@@ -56,19 +56,19 @@ public class Vector3f {
 	}
 	
 	/**
-	 * v1 µã³Ë v2
+	 * v1 ç‚¹ä¹˜ v2
 	 * @param v1
 	 * @param v2
-	 * @return ĞÂÏòÁ¿¶ÔÏó
+	 * @return æ–°å‘é‡å¯¹è±¡
 	 */
 	public final Vector3f multiByPointForNewInstance(Vector3f v1, Vector3f v2) {
 		return v1.multiByPointForNewInstance(v2);
 	}
 	
 	/**
-	 *µ±Ç°¶ÔÏóµã³Ë v ²»¸Ä±äµ±Ç°¶ÔÏóÖµ
+	 *å½“å‰å¯¹è±¡ç‚¹ä¹˜ v ä¸æ”¹å˜å½“å‰å¯¹è±¡å€¼
 	 * @param v
-	 * @return ĞÂµÄÏòÁ¿¶ÔÏó
+	 * @return æ–°çš„å‘é‡å¯¹è±¡
 	 */
 	public final Vector3f multiByPointForNewInstance(Vector3f v) {
 		Vector3f t_temp = new Vector3f();
@@ -79,7 +79,7 @@ public class Vector3f {
 	}
 	
 	/**
-	 * µ±Ç°¶ÔÏó²æ³Ëv
+	 * å½“å‰å¯¹è±¡å‰ä¹˜v
 	 * @param v
 	 * @return this
 	 */
@@ -91,7 +91,7 @@ public class Vector3f {
 	}
 	
 	/**
-	 * v1²æ³Ëv2¸³Öµ¸øµ±Ç°¶ÔÏó
+	 * v1å‰ä¹˜v2èµ‹å€¼ç»™å½“å‰å¯¹è±¡
 	 * @param v1
 	 * @param v2
 	 * @return this
@@ -104,9 +104,9 @@ public class Vector3f {
 	}
 	
 	/**
-	 * µ±Ç°¶ÔÏó²æ³Ëv ²»¸Ä±äµ±Ç°ÏòÁ¿Öµ
+	 * å½“å‰å¯¹è±¡å‰ä¹˜v ä¸æ”¹å˜å½“å‰å‘é‡å€¼
 	 * @param v
-	 * @return ĞÂµÄÏòÁ¿¶ÔÏó
+	 * @return æ–°çš„å‘é‡å¯¹è±¡
 	 */
 	public final Vector3f multiByForkForNewInstance(Vector3f v) {
 		Vector3f v_temp = new Vector3f();
@@ -117,17 +117,17 @@ public class Vector3f {
 	}
 	
 	/**
-	 * v1²æ³Ëv2
+	 * v1å‰ä¹˜v2
 	 * @param v1
 	 * @param v2
-	 * @return ĞÂµÄÏòÁ¿¶ÔÏó
+	 * @return æ–°çš„å‘é‡å¯¹è±¡
 	 */
 	public final Vector3f multiByForkForNewInstance(Vector3f v1, Vector3f v2) {
 		return v1.multiByForkForNewInstance(v2);
 	}
 	
 	/**
-	 * ÓëÁíÒ»ÏòÁ¿Ïà¼Ó£¬²¢¸³Öµ¸ø±¾Éí
+	 * ä¸å¦ä¸€å‘é‡ç›¸åŠ ï¼Œå¹¶èµ‹å€¼ç»™æœ¬èº«
 	 * @param v
 	 * @return this
 	 */
@@ -139,7 +139,7 @@ public class Vector3f {
 	}
 	
 	/**
-	 * ÉèÖÃÎ»ÖÃ
+	 * è®¾ç½®ä½ç½®
 	 * @param v
 	 */
 	public final void setPosition(Vector3f v) {
@@ -147,7 +147,7 @@ public class Vector3f {
 	}
 	
 	/**
-	 * ÉèÖÃÎ»ÖÃ
+	 * è®¾ç½®ä½ç½®
 	 * @param x
 	 * @param y
 	 * @param z
@@ -162,7 +162,7 @@ public class Vector3f {
 		return this.coord;
 	}
 	java.text.DecimalFormat   df   =new   java.text.DecimalFormat("#.0000"); 
-	//df.format(ÄãÒª¸ñÊ½»¯µÄÊı×Ö);
+	//df.format(ä½ è¦æ ¼å¼åŒ–çš„æ•°å­—);
 	public final float getX() {
 		return Float.valueOf(df.format(this.coord[0])) ;
 	}

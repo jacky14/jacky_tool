@@ -8,13 +8,13 @@ import java.util.Map.Entry;
 import java.util.Set;
 
 /**
- * ²ÄÖÊÌùÍ¼¹ÜÀí
+ * æè´¨è´´å›¾ç®¡ç†
  * @author DEVILIVED
  *
  */
 public class TextureManager {
 	
-	private final String TEXTURE_FILE_PATH = "res/";			//²ÄÖÊÎÄ¼şÄ¿Â¼
+	private final String TEXTURE_FILE_PATH = "res/";			//æè´¨æ–‡ä»¶ç›®å½•
 	
 	//private GL10 gl;
 
@@ -110,13 +110,13 @@ public class TextureManager {
 		int texture = this.getTexture(name);
 		if(texture != 0) {
 			
-			//°ó¶¨ÎÆÀíid
+			//ç»‘å®šçº¹ç†id
 		   // GLES20.glBindTexture(GLES20.GL_TEXTURE_2D, texture);
-			/*//Ê¹ÓÃ²ÄÖÊ
+			/*//ä½¿ç”¨æè´¨
 			gl.glEnable(GL10.GL_TEXTURE_2D);
-			//ÎÆÀí
+			//çº¹ç†
 	        gl.glEnableClientState(GL10.GL_TEXTURE_COORD_ARRAY);
-			//Ê¹ÓÃ²ÎÊı,²»È»ÓĞ½Ó·ì
+			//ä½¿ç”¨å‚æ•°,ä¸ç„¶æœ‰æ¥ç¼
 			gl.glTexParameterf(GL10.GL_TEXTURE_2D, GL10.GL_TEXTURE_WRAP_S, GL10.GL_CLAMP_TO_EDGE);
 	        gl.glTexParameterf(GL10.GL_TEXTURE_2D, GL10.GL_TEXTURE_WRAP_T, GL10.GL_CLAMP_TO_EDGE);
 			gl.glBindTexture(GL10.GL_TEXTURE_2D, texture);*/
@@ -124,8 +124,8 @@ public class TextureManager {
 	}
 	
 	/**
-	 * ÊÍ·Åµ¥¸ö²ÄÖÊ
-	 * @param name ²ÄÖÊÃû
+	 * é‡Šæ”¾å•ä¸ªæè´¨
+	 * @param name æè´¨å
 	 */
 	public final void dispose(String name) {
 		if(this.contains(name)) {
@@ -136,7 +136,7 @@ public class TextureManager {
 	
 	
 	/**
-	 * ÊÍ·ÅËùÓĞ²ÄÖÊ
+	 * é‡Šæ”¾æ‰€æœ‰æè´¨
 	 */
 	public final void dispose() {
 		Set<Entry<String, Integer>> set = this.textures.entrySet();

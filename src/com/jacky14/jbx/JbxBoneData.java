@@ -13,7 +13,7 @@ import java.io.OutputStream;
 public class JbxBoneData {
     public static String path = "C:\\Users\\Administrator\\Desktop\\tmp\\";
     public static String suffix = ".jxbb";
-    //帧数index 整体骨骼数据
+    //甯ф暟index 鏁翠綋楠ㄩ鏁版嵁
     public  float [][] data;
 
 

@@ -47,9 +47,9 @@ public class GMCFileUtil {
     }
 
     public static void main5(String[] args) throws Exception {
-       // int a = 'ÎÄ';
+       // int a = 'æ–‡';
         //System.out.print(a);
-        //¼ÓÔØÒ»¸öÎäÆ÷ÎÄ¼ş
+        //åŠ è½½ä¸€ä¸ªæ­¦å™¨æ–‡ä»¶
         //load("F:\\mypro\\jacky-X\\jacky-toool\\assets\\w4_2.GMC");
         //LXobj l=new LXobj();
         //l.loadObj("F:\\mypro\\jacky-X\\jacky-toool\\assets\\p0.skc");
@@ -59,9 +59,9 @@ public class GMCFileUtil {
         AmbBone comm=  AmbAnsys.ansysAmb(Skc2Jbx.thisModuleAssetsPath + "character"+".amb");
 
         List<Frame> framesnewall = new ArrayList<>();
-        //Ìí¼ÓÈËÎï±¾Éí¶¯×÷
+        //æ·»åŠ äººç‰©æœ¬èº«åŠ¨ä½œ
         //AmbBon2Jxbb.addframe(AmbBon2Jxbb.myani,ab.frames,framesnewall);
-        //Ìí¼Ó¹«ÓÃ¶¯×÷
+        //æ·»åŠ å…¬ç”¨åŠ¨ä½œ
         //ex dao bishou jian
         //AmbBon2Jxbb.addframe(AmbBon2Jxbb.ex,comm.frames,framesnewall);
 
@@ -71,7 +71,7 @@ public class GMCFileUtil {
         AmbBon2Jxbb.addframe(AmbBon2Jxbb.jian,comm.frames,framesnewall);
 
 
-        //¼ÆËãµ±Ç°½ÚµãµÄ¾ø¶Ô¾ØÕó
+        //è®¡ç®—å½“å‰èŠ‚ç‚¹çš„ç»å¯¹çŸ©é˜µ
         LXbone.mode = 1;
         bones1= LXbone.get_bone(new FileInputStream("F:\\mypro\\jacky-X\\jacky-desktop\\assets\\p0.bnc"));
         for(int i=0;i<bones1.size();i++){
@@ -80,10 +80,10 @@ public class GMCFileUtil {
         float temp[][][] = new float [framesnewall.size()][][];
 
 
-        for(int i=0;i<framesnewall.size();i++){//Ñ­»·ËùÓĞµÄÖ¡
+        for(int i=0;i<framesnewall.size();i++){//å¾ªç¯æ‰€æœ‰çš„å¸§
             Frame fe =framesnewall.get(i);
             fe.m = new Matrix[fe.quaternion.length + fe.dummys.length];
-            for(int j=0;j<fe.quaternion.length;j++){//ÆäÖĞÄ³Ò»Ö¡µÄ¶¯»­
+            for(int j=0;j<fe.quaternion.length;j++){//å…¶ä¸­æŸä¸€å¸§çš„åŠ¨ç”»
                 LXbone bone=bones1.get(j);
                 bone.fvpos = bone.vpos;
                 bone.fvrot = fe.quaternion[j];
@@ -93,7 +93,7 @@ public class GMCFileUtil {
                 bone.fvpos = bone.vpos;
                 bone.fvrot = fe.dummys[j].quaternion ;
             }
-            //¼ÆËãÄ³Ò»Ö¡ÖĞ¹Ç÷À¶ÔÓ¦µÄ±ä»¯¾ØÕó
+            //è®¡ç®—æŸä¸€å¸§ä¸­éª¨éª¼å¯¹åº”çš„å˜åŒ–çŸ©é˜µ
             for(int j=0;j<bones1.size();j++){
                 coPFM(bones1.get(j));
             }
@@ -103,8 +103,8 @@ public class GMCFileUtil {
 
 
 
-          /* if(i==66){//µÚ¼¸Ö¡Ê±ÌØÊâ´¦ÀíÊı¾İ
-                //Éú³ÉÈËÎïÄ£ĞÍÎÄ¼ş
+          /* if(i==66){//ç¬¬å‡ å¸§æ—¶ç‰¹æ®Šå¤„ç†æ•°æ®
+                //ç”Ÿæˆäººç‰©æ¨¡å‹æ–‡ä»¶
                 for(int j=0;j<l.vertexs.length;j++){
                     SimpleVector vertex =new SimpleVector(l.vertexs[j].verts[0],l.vertexs[j].verts[1],l.vertexs[j].verts[2]);
 
@@ -115,7 +115,7 @@ public class GMCFileUtil {
                     l.vertexs[j].verts[2] = vertex.z;
 
                 }
-                //Éú³ÉÎäÆ÷Ä£ĞÍÎÄ¼ş
+                //ç”Ÿæˆæ­¦å™¨æ¨¡å‹æ–‡ä»¶
                 for(int j=0;j<ver.length/3 ;j++){
                     SimpleVector vertex =new SimpleVector(ver[j*3],ver[j*3 + 1],ver[j*3 + 2]);
                     vertex.matMul(bones1.get(33).BianHuaJuZhen);
@@ -148,9 +148,9 @@ public class GMCFileUtil {
         //obj.save("C:\\Users\\Administrator\\Desktop\\tmp\\");
 
 
-        //¼ÓÔØÒ»¸ö¹Ç÷ÀÊı¾İÎÄ¼ş
+        //åŠ è½½ä¸€ä¸ªéª¨éª¼æ•°æ®æ–‡ä»¶
        /*
-        //ÎäÆ÷Êı¾İÎÄ¼ş³ËÒÔ¹Ç÷ÀÎÄ¼ş¾ø¶Ô¾ØÕóµÄÄæ»Øµ½±¾µØ¿Õ¼ä
+        //æ­¦å™¨æ•°æ®æ–‡ä»¶ä¹˜ä»¥éª¨éª¼æ–‡ä»¶ç»å¯¹çŸ©é˜µçš„é€†å›åˆ°æœ¬åœ°ç©ºé—´
         int length = ver.length /3;
         for(int i=0;i<length;i++){
             SimpleVector vertex =new SimpleVector(ver[i*3],ver[i*3+1],ver[i*3+2]);
@@ -171,12 +171,12 @@ public class GMCFileUtil {
 
 
 
-    //µ±Ç°¹Ç÷ÀÈ«²¿¹Ç÷ÀÊı¾İ
+    //å½“å‰éª¨éª¼å…¨éƒ¨éª¨éª¼æ•°æ®
     public static List<LXbone> bones1;
 
 
     /**
-     * ¼ÆËãÄ³Ò»Ö¡ÖĞ¹Ç÷À¶ÔÓ¦µÄ±ä»¯¾ØÕó
+     * è®¡ç®—æŸä¸€å¸§ä¸­éª¨éª¼å¯¹åº”çš„å˜åŒ–çŸ©é˜µ
      * @param bone
      */
     public static void coPFM(LXbone bone){
@@ -193,17 +193,17 @@ public class GMCFileUtil {
     }
 
     /**
-     * ¼ÆËãµ±Ç°½ÚµãµÄ¾ø¶Ô¾ØÕó
+     * è®¡ç®—å½“å‰èŠ‚ç‚¹çš„ç»å¯¹çŸ©é˜µ
      * @param bone
      */
     public static void coPJD(LXbone bone){
-        //1.¼ÆËãµ±Ç°½ÚµãµÄÏà¶Ô¾ØÕó
+        //1.è®¡ç®—å½“å‰èŠ‚ç‚¹çš„ç›¸å¯¹çŸ©é˜µ
         Matrix matrix=new Quaternion(bone.vrot[1], bone.vrot[2], bone.vrot[3],bone.vrot[0]).getRotationMatrix();
         matrix.translate(bone.vpos[0], bone.vpos[1],bone.vpos[2]);
         bone.XiangDuiJuZhen =matrix.cloneMatrix();
         if(bone.parentIndex!=-1){
             LXbone pbone = bones1.get(bone.parentIndex);
-            //Èç¹û¸¸½Úµã¾ø¶Ô¾ØÕóÎª¿Õ£¬Ôòµİ¹é¼ÆËã¸¸½Úµã¾ø¶Ô¾ØÕó¡£
+            //å¦‚æœçˆ¶èŠ‚ç‚¹ç»å¯¹çŸ©é˜µä¸ºç©ºï¼Œåˆ™é€’å½’è®¡ç®—çˆ¶èŠ‚ç‚¹ç»å¯¹çŸ©é˜µã€‚
             if(pbone.JueDuiJuZhen ==null){
                 coPJD(pbone);
             }

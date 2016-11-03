@@ -13,18 +13,18 @@ import dev.mouse.util.BufferBuilder;
 import dev.mouse.util.TextureManager;
 
 /**
- * ms3dÄ£ĞÍĞÅÏ¢
+ * ms3dæ¨¡å‹ä¿¡æ¯
  * @author DEVILIVED
  *
  */
 public class MS3DModel {
 
-	private FloatBuffer[] vertexCoordingBuffer;	//¶¥µã»º³å
+	private FloatBuffer[] vertexCoordingBuffer;	//é¡¶ç‚¹ç¼“å†²
 	
 	
-	private FloatBuffer[][] AttackvertexCoordingBuffers;	//Ö÷½Ç¹¥»÷¶¥µã»º³å
+	private FloatBuffer[][] AttackvertexCoordingBuffers;	//ä¸»è§’æ”»å‡»é¡¶ç‚¹ç¼“å†²
 	/**
-	 * ¸ÃÄ£ĞÍ»º´æµÄÃ¿Ö¡¶ÔÓ¦µÄÊ±¿Ì
+	 * è¯¥æ¨¡å‹ç¼“å­˜çš„æ¯å¸§å¯¹åº”çš„æ—¶åˆ»
 	 */
 	private float [] Attacktimes;
 	
@@ -81,20 +81,20 @@ public class MS3DModel {
 		
 		   
 		   
-			//ÉèÖÃ¶¨µãÊı×é
+			//è®¾ç½®å®šç‚¹æ•°ç»„
 			int group_size = this.groups.length;
 	        int trian_size = 0;
 	        MS3DGroup group = null;
 	        int[] indexs = null;
 	       
 	        
-	        //²ÄÖÊ
+	        //æè´¨
 	        MS3DMaterial material = null;
 	        for(int i=0; i<group_size; i++) {
 	        	group = this.groups[i];
 	        	indexs = group.getIndicies();
 	        	trian_size = indexs.length;
-	        	//ÓĞ²ÄÖÊ
+	        	//æœ‰æè´¨
 	        	if(group.getMaterialIndex() > -1) {
 	        		material = this.materials[group.getMaterialIndex()];
 	        		this.textureManager.fillTexture(material.getName());
@@ -102,13 +102,13 @@ public class MS3DModel {
 	        	}
 	        	
 	        	//int a=vertexCoordingBuffer[i].;
-	        	//ÎÆÀíuv
+	        	//çº¹ç†uv
 	        	//GLES20.glVertexAttribPointer(maTexCoorHandle,2,GLES20.GL_FLOAT,false,2*4,this.texCoordingBuffer[i]);
-	        	//¶¥µã
+	        	//é¡¶ç‚¹
 	        	//GLES20.glVertexAttribPointer(apoint,3,GLES20.GL_FLOAT,false,3*4,this.AttackvertexCoordingBuffers[index][i]);
-	        	//ÔÊĞíÊ¹ÓÃ¶¥µãÎ»ÖÃÊı¾İ
+	        	//å…è®¸ä½¿ç”¨é¡¶ç‚¹ä½ç½®æ•°æ®
 		        //GLES20.glEnableVertexAttribArray(apoint);  
-		        //ÔÊĞíÊ¹ÓÃÎÆÀíuvÎ»ÖÃÊı¾İ
+		        //å…è®¸ä½¿ç”¨çº¹ç†uvä½ç½®æ•°æ®
 		       // GLES20.glEnableVertexAttribArray(maTexCoorHandle);
 		       //GLES20.glDrawArrays(GLES20.GL_TRIANGLES, 0,trian_size * 3); 
 	        }
@@ -116,11 +116,11 @@ public class MS3DModel {
 		}
 	
 	/**
-	 * Ê¹ÓÃ»º´æÊ¹ÓÃÄÚ´æ¼ÇÂ¼Ã¿Ò»Ö¡ËùĞèÒªµÄÊı¾İ
+	 * ä½¿ç”¨ç¼“å­˜ä½¿ç”¨å†…å­˜è®°å½•æ¯ä¸€å¸§æ‰€éœ€è¦çš„æ•°æ®
 	 */
-	private FloatBuffer[][] vertexCoordingBuffers;	//¶¥µã»º³å
+	private FloatBuffer[][] vertexCoordingBuffers;	//é¡¶ç‚¹ç¼“å†²
 	/**
-	 * ¸ÃÄ£ĞÍ»º´æµÄÃ¿Ö¡¶ÔÓ¦µÄÊ±¿Ì
+	 * è¯¥æ¨¡å‹ç¼“å­˜çš„æ¯å¸§å¯¹åº”çš„æ—¶åˆ»
 	 */
 	private float [] times;
 	
@@ -133,7 +133,7 @@ public class MS3DModel {
 		this.times = times;
 	}
 	
-	//Ä³Ò»¹Ç÷ÀËùÓĞÖ¡ĞÅÏ¢
+	//æŸä¸€éª¨éª¼æ‰€æœ‰å¸§ä¿¡æ¯
 	MS3DJoint[] timejoint ;
 	
 	
@@ -197,14 +197,14 @@ public class MS3DModel {
 		
 	}
 	/**
-	 * ¸ù¾İ´«ÈëµÄÊ±¼ä¼ÆËã»º´æÊı¾İ£¬Ò»¸öÊ±¿ÌÎªÒ»Ö¡
+	 * æ ¹æ®ä¼ å…¥çš„æ—¶é—´è®¡ç®—ç¼“å­˜æ•°æ®ï¼Œä¸€ä¸ªæ—¶åˆ»ä¸ºä¸€å¸§
 	 *
-	 * @param isMan ÊÇ·ñÊÇÈËÎïÄ£ĞÍ Èç¹ûÊÇÔòÔÚÒÆ¶¯Ö¡¸üĞÂ¹Ç÷ÀÊ± ²»¸üĞÂÒÆ¶¯
-	 * join  ¸ÃÄ£ĞÍĞèÒª¼ÇÂ¼ÄÇ¿éÌØÊâ¹Ç÷ÀËùÓĞÖ¡±ä»¯Çé¿ö   null Îª²»¼ÇÂ¼¹È¸è±ä»¯Çé¿ö    maxindex ´ú±í¼ÇÂ¼¸Ã¹Ç÷À0µ½ÄÇÒ»Ö¡µÄÊı¾İ
+	 * @param isMan æ˜¯å¦æ˜¯äººç‰©æ¨¡å‹ å¦‚æœæ˜¯åˆ™åœ¨ç§»åŠ¨å¸§æ›´æ–°éª¨éª¼æ—¶ ä¸æ›´æ–°ç§»åŠ¨
+	 * join  è¯¥æ¨¡å‹éœ€è¦è®°å½•é‚£å—ç‰¹æ®Šéª¨éª¼æ‰€æœ‰å¸§å˜åŒ–æƒ…å†µ   null ä¸ºä¸è®°å½•è°·æ­Œå˜åŒ–æƒ…å†µ    maxindex ä»£è¡¨è®°å½•è¯¥éª¨éª¼0åˆ°é‚£ä¸€å¸§çš„æ•°æ®
 	 */
 	public  void setbuff( Boolean  isMan,Integer join,Integer maxindex){
 		vertexCoordingBuffers=new FloatBuffer[times.length][];
-		//³¤ÆÚÒÔÀ´µÄÎÊÌâÊÇ×ÜÊÇ³öÏÖ¿¨¶ÙÏÖÏó£¬£¬£¬£¬Î¨Ò»ÄÜÏëµ½µÄ½â¾ö·½°¸Ê¹ÓÃ»º´æ  ÒÔÎşÉüÄÚ´æ»»È¡CPU  Ä¿Ç°ÊÖ»úÄÚ´æÆÕ±é½Ï´ó  ÕâÖÖ·½·¨Ó¦¸ÃÊÊÓÃ
+		//é•¿æœŸä»¥æ¥çš„é—®é¢˜æ˜¯æ€»æ˜¯å‡ºç°å¡é¡¿ç°è±¡ï¼Œï¼Œï¼Œï¼Œå”¯ä¸€èƒ½æƒ³åˆ°çš„è§£å†³æ–¹æ¡ˆä½¿ç”¨ç¼“å­˜  ä»¥ç‰ºç‰²å†…å­˜æ¢å–CPU  ç›®å‰æ‰‹æœºå†…å­˜æ™®éè¾ƒå¤§  è¿™ç§æ–¹æ³•åº”è¯¥é€‚ç”¨
 		if(join!=null){
 			timejoint=new MS3DJoint[maxindex];
 		}
@@ -253,29 +253,29 @@ public class MS3DModel {
 	
 	
 	
-	private FloatBuffer[] texCoordingBuffer;//²ÄÖÊ»º³å
+	private FloatBuffer[] texCoordingBuffer;//æè´¨ç¼“å†²
 	
-	private TextureManager textureManager;	//²ÄÖÊ¹ÜÀíÆ÷
+	private TextureManager textureManager;	//æè´¨ç®¡ç†å™¨
 
-	private MS3DHeader header;				//Í·ĞÅÏ¢
+	private MS3DHeader header;				//å¤´ä¿¡æ¯
 	
-	private MS3DVertex[] vertexs;			//¶¥µãĞÅÏ¢
+	private MS3DVertex[] vertexs;			//é¡¶ç‚¹ä¿¡æ¯
 	
-	private MS3DTriangle[] triangles;		//Èı½ÇĞÎË÷Òı
+	private MS3DTriangle[] triangles;		//ä¸‰è§’å½¢ç´¢å¼•
 	
-	private MS3DGroup[] groups;				//×éĞÅÏ¢
+	private MS3DGroup[] groups;				//ç»„ä¿¡æ¯
 	
-	private MS3DMaterial[] materials;		//²ÄÖÊĞÅÏ¢
+	private MS3DMaterial[] materials;		//æè´¨ä¿¡æ¯
 	
-	public float fps;						//fpsĞÅÏ¢
+	public float fps;						//fpsä¿¡æ¯
 	
-	public float current_time;				//µ±Ç°Ê±¼ä
+	public float current_time;				//å½“å‰æ—¶é—´
 	
-	public float total_time;				//×ÜÊ±¼ä
+	public float total_time;				//æ€»æ—¶é—´
 	
-	public float frame_count;				//¹Ø¼üÖ¡Êı
+	public float frame_count;				//å…³é”®å¸§æ•°
 	
-	public MS3DJoint[] joints;				//¹Ø½ÚĞÅÏ¢
+	public MS3DJoint[] joints;				//å…³èŠ‚ä¿¡æ¯
 	
 	private MS3DModel() {}
 	
@@ -313,7 +313,7 @@ public class MS3DModel {
 	 * @param joint
 	 * @param apoint
 	 * @param maTexCoorHandle
-	 * @param newver ÊÇ·ñ¸üĞÂ³õÊ¼¶¥µã
+	 * @param newver æ˜¯å¦æ›´æ–°åˆå§‹é¡¶ç‚¹
 	 */
 	/*public void updatewpean(MS3DJoint joint ,int apoint,int maTexCoorHandle,boolean newver,float time){
 		int count = this.vertexs.length;
@@ -338,7 +338,7 @@ public class MS3DModel {
 		
 	}*/
 	/*public final void animate(float time,int apoint,int maTexCoorHandle) {
-		//ÏàÍ¬Ê±¼ä²»×ö¸üĞÂ
+		//ç›¸åŒæ—¶é—´ä¸åšæ›´æ–°
 		if(this.current_time != time){
 			this.updateJoint(time);
 			this.updateVectexs();
@@ -352,17 +352,17 @@ public class MS3DModel {
 	
 	
 	/**
-	 * ¸üĞÂ¹Ø½Ú
-	 * @param time Ê±¼ä  isman ¸üĞÂ¹Ç÷ÀÊ±ÊÇ·ñ¸üĞÂÒÆ¶¯µÄÆ½ÒÆĞÅÏ¢
+	 * æ›´æ–°å…³èŠ‚
+	 * @param time æ—¶é—´  isman æ›´æ–°éª¨éª¼æ—¶æ˜¯å¦æ›´æ–°ç§»åŠ¨çš„å¹³ç§»ä¿¡æ¯
 	 */
 	public void updateJoint(float time,Boolean isMan){
 		this.current_time = time;
 		if(this.current_time > this.total_time)
 			this.current_time = 0.0f;
-		//¸üĞÂ¹Ç÷À
+		//æ›´æ–°éª¨éª¼
 		int size = this.joints.length;
 		for(int i=0; i<size; i++){
-			if(i==0){//²»ÊÇÖ¸¶¨µÄ¹Ç÷À ²»¸Ã¶¯Æ½ÒÆ
+			if(i==0){//ä¸æ˜¯æŒ‡å®šçš„éª¨éª¼ ä¸è¯¥åŠ¨å¹³ç§»
 				this.joints[i].update(this.current_time,isMan);
 			}else {
 				this.joints[i].update(this.current_time,null);
@@ -371,27 +371,27 @@ public class MS3DModel {
 		}
 	}
     public final void draw(int apoint,int maTexCoorHandle,int index) {
-		//ÉèÖÃ¶¨µãÊı×é
+		//è®¾ç½®å®šç‚¹æ•°ç»„
 		int group_size = this.groups.length;
         int trian_size = 0;
         MS3DGroup group = null;
         int[] indexs = null;
        
         
-        //²ÄÖÊ
+        //æè´¨
         MS3DMaterial material = null;
         for(int i=0; i<group_size; i++) {
         	group = this.groups[i];
         	indexs = group.getIndicies();
         	trian_size = indexs.length;
-        	//ÓĞ²ÄÖÊ
+        	//æœ‰æè´¨
         	if(group.getMaterialIndex() > -1) {
         		material = this.materials[group.getMaterialIndex()];
         		this.textureManager.fillTexture(material.getName());
         		//gl.glTexCoordPointer(2, GL10.GL_FLOAT, 0, this.texCoordingBuffer[i]);
         	}
         	
-        	/*//ÊÇ·ñ¸üĞÂ¶¥µã»º³å
+        	/*//æ˜¯å¦æ›´æ–°é¡¶ç‚¹ç¼“å†²
         	if(isupdate){
         		buffer = this.vertexCoordingBuffer[i];
         		for(int j=0; j<trian_size; j++) {
@@ -404,20 +404,20 @@ public class MS3DModel {
         		buffer.position(0);
         	}*/
         	//int a=vertexCoordingBuffer[i].;
-        	//ÎÆÀíuv
+        	//çº¹ç†uv
         	//GLES20.glVertexAttribPointer(maTexCoorHandle,2,GLES20.GL_FLOAT,false,2*4,this.texCoordingBuffer[i]);
-        	//¶¥µã
+        	//é¡¶ç‚¹
         	
-        	//Èç¹û¶¥µã»º´æÎª¿ÕÔò  ËµÃ÷¸ÃÄ£ĞÍÎªÓ¢ĞÛÄ£ĞÍ»æÖÆ´ı»úÊ±¶¯×÷
+        	//å¦‚æœé¡¶ç‚¹ç¼“å­˜ä¸ºç©ºåˆ™  è¯´æ˜è¯¥æ¨¡å‹ä¸ºè‹±é›„æ¨¡å‹ç»˜åˆ¶å¾…æœºæ—¶åŠ¨ä½œ
         	if(this.vertexCoordingBuffers==null||this.vertexCoordingBuffers[index]==null||this.vertexCoordingBuffers[index][i]==null){
         		//GLES20.glVertexAttribPointer(apoint,3,GLES20.GL_FLOAT,false,3*4,this.AttackvertexCoordingBuffers[0][i]);
         	}else {
         		//GLES20.glVertexAttribPointer(apoint,3,GLES20.GL_FLOAT,false,3*4,this.vertexCoordingBuffers[index][i]);
 			}
         	
-        	//ÔÊĞíÊ¹ÓÃ¶¥µãÎ»ÖÃÊı¾İ
+        	//å…è®¸ä½¿ç”¨é¡¶ç‚¹ä½ç½®æ•°æ®
 	        //GLES20.glEnableVertexAttribArray(apoint);  
-	        //ÔÊĞíÊ¹ÓÃÎÆÀíuvÎ»ÖÃÊı¾İ
+	        //å…è®¸ä½¿ç”¨çº¹ç†uvä½ç½®æ•°æ®
 	       // GLES20.glEnableVertexAttribArray(maTexCoorHandle);
 	       // GLES20.glDrawArrays(GLES20.GL_TRIANGLES, 0,trian_size * 3); 
         }
@@ -431,17 +431,17 @@ public class MS3DModel {
 		}
 	}
 	/**
-	 * ¸üĞÂ¶¥µã
+	 * æ›´æ–°é¡¶ç‚¹
 	 */
 	private void updateVectex(int index){
-		//¹Ç÷À±ä»»¶¥µã×ø±ê
+		//éª¨éª¼å˜æ¢é¡¶ç‚¹åæ ‡
 		MS3DVertex vertex = this.vertexs[index];
-		//ÊÇ·ñÓĞ¹Ç÷À
+		//æ˜¯å¦æœ‰éª¨éª¼
 		if(vertex.getBone() == -1){
-			//ÎŞ¹Ç÷À¿ØÖÆ
+			//æ— éª¨éª¼æ§åˆ¶
 			vertex.setBuffer(vertex.getVertex());
 		}else{
-			//ÓĞ¹Ç÷À¿ØÖÆ
+			//æœ‰éª¨éª¼æ§åˆ¶
 			MS3DJoint joint = this.joints[vertex.getBone()];
 			
 			if(vertex.getVerbuff()==null){
@@ -453,9 +453,9 @@ public class MS3DModel {
 	
 	
 	/**
-	 * ¼ÓÔØÄ£ĞÍ
+	 * åŠ è½½æ¨¡å‹
 	 * @param is
-	 * @param manager ²ÄÖÊ¹ÜÀíÆ÷
+	 * @param manager æè´¨ç®¡ç†å™¨
 	 * @return
 	 */
 	public final static MS3DModel load(InputStream is,float[] mMMatrix,TextureManager manager,String mangname) {
@@ -464,29 +464,29 @@ public class MS3DModel {
 		try {
 			fis = new LittleEndianInputStream(is);
 			model = new MS3DModel();
-			//²ÄÖÊ¹ÜÀíÆ÷
+			//æè´¨ç®¡ç†å™¨
 			model.textureManager = manager;
-			//Í·ĞÅÏ¢
+			//å¤´ä¿¡æ¯
 			model.header = MS3DHeader.load(fis);
-			//¶¥µã
+			//é¡¶ç‚¹
 			model.vertexs = MS3DVertex.load(fis, mMMatrix );
-			//Èı½ÇĞÎË÷Òı
+			//ä¸‰è§’å½¢ç´¢å¼•
 			model.triangles = MS3DTriangle.load(fis);
 			//Group
 			model.groups = MS3DGroup.load(fis);
-			//²ÄÖÊĞÅÏ¢
+			//æè´¨ä¿¡æ¯
 			model.materials = MS3DMaterial.load(fis,manager,mangname);
 			//FPS
 			model.fps = fis.readFloat();
-			//µ±Ç°Ê±¼ä
+			//å½“å‰æ—¶é—´
 			model.current_time = fis.readFloat();
-			//¹Ø¼üÖ¡Êı
+			//å…³é”®å¸§æ•°
 			model.frame_count = fis.readInt();
-			//×ÜÊ±¼ä
+			//æ€»æ—¶é—´
 			model.total_time = model.frame_count / model.fps;
-			//¹Ø½Ú
+			//å…³èŠ‚
 			model.joints = MS3DJoint.load(fis);
-			//³õÊ¼»¯»º³å
+			//åˆå§‹åŒ–ç¼“å†²
 			model.initBuffer();
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -504,29 +504,29 @@ public class MS3DModel {
 	}
 
 	/**
-	 * ³õÊ¼»¯
+	 * åˆå§‹åŒ–
 	 */
 	private void initBuffer() {
-		//½«¹Ø½Ú¸üĞÂµ½0.0f
+		//å°†å…³èŠ‚æ›´æ–°åˆ°0.0f
 		this.updateJoint(0.0f,null);
-		//¸üĞÂ¶¥µã×ø±ê
+		//æ›´æ–°é¡¶ç‚¹åæ ‡
 		this.updateVectexs();
-		//²ÄÖÊ¡¢¶¥µã×ø±ê»º³å
-		//×éÊıÁ¿
+		//æè´¨ã€é¡¶ç‚¹åæ ‡ç¼“å†²
+		//ç»„æ•°é‡
 		int count = this.groups.length;
-		//Ã¿×éÈı½ÇĞÎ¸öÊı
+		//æ¯ç»„ä¸‰è§’å½¢ä¸ªæ•°
 		int trian_size = 0;
-		//ÁÙÊ±×éĞÅÏ¢
+		//ä¸´æ—¶ç»„ä¿¡æ¯
 		MS3DGroup group = null;
-		//ÁÙÊ±Èı½ÇĞÎĞÅÏ¢
+		//ä¸´æ—¶ä¸‰è§’å½¢ä¿¡æ¯
 		MS3DTriangle triangle = null;
-		//²ÄÖÊ×ø±ê»º³å
+		//æè´¨åæ ‡ç¼“å†²
 		this.texCoordingBuffer = new FloatBuffer[count];
-		//¶¥µã×ø±ê»º³å
+		//é¡¶ç‚¹åæ ‡ç¼“å†²
 		this.vertexCoordingBuffer = new FloatBuffer[count];
-		//Èı½ÇĞÎĞòºÅ
+		//ä¸‰è§’å½¢åºå·
 		int[] indexs = null;
-		//¶¥µãĞòºÅ
+		//é¡¶ç‚¹åºå·
 		int[] vertexIndexs = null;
 		FloatBuffer buffer = null;
 		for(int i=0; i<count; i++) {
@@ -538,13 +538,13 @@ public class MS3DModel {
 			for(int j=0; j<trian_size; j++) {
 				triangle = this.triangles[indexs[j]];
 				vertexIndexs = triangle.getIndexs();
-				//»º³å
+				//ç¼“å†²
 				for(int k=0; k<3; k++){
-					//ÉèÖÃ²ÄÖÊÌùÍ¼»º³å
+					//è®¾ç½®æè´¨è´´å›¾ç¼“å†²
 					buffer = this.texCoordingBuffer[i];
 					buffer.put(triangle.getS().getVector3fArray()[k]);
 					buffer.put(triangle.getT().getVector3fArray()[k]);
-					//³õÊ¼»¯¶¥µã»º³å
+					//åˆå§‹åŒ–é¡¶ç‚¹ç¼“å†²
 					buffer = this.vertexCoordingBuffer[i];
 					buffer.put(this.vertexs[vertexIndexs[k]].getBuffer().getVector3fArray());
 				}

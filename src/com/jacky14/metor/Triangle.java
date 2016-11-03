@@ -3,13 +3,13 @@ package com.jacky14.metor;
 public class Triangle {
 
 	/**
-	 * ²ÄÖÊË÷Òı
+	 * æè´¨ç´¢å¼•
 	 */
 	public int mat_index;
 	
 	
 	/**
-	 * ¶¥µãË÷Òı
+	 * é¡¶ç‚¹ç´¢å¼•
 	 */
 	public int[] v_index;
 }

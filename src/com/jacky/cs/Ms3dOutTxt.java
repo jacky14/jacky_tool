@@ -80,9 +80,9 @@ public class Ms3dOutTxt {
 			
 			Matrix4f juzhen = new Matrix4f();
 			juzhen.loadIdentity();
-			//ÉèÖÃĞı×ª
+			//è®¾ç½®æ—‹è½¬
 			juzhen.setRotationRadians(rol);//[-1.5707964, -1.570795, 0.0]
-			//ÉèÖÃÎ»ÒÆ
+			//è®¾ç½®ä½ç§»
 			juzhen.setTranslation(p);//[0.233849, 38.19215, 2.25168]
 			
 			String juzhenstr  = 
@@ -109,7 +109,7 @@ public class Ms3dOutTxt {
 						+juzhen.getMatrixArray()[0][3] + " " + juzhen.getMatrixArray()[1][3] +" " + juzhen.getMatrixArray()[2][3];
 				//String jstraa
 				pw.println("a "  + juzhenstr );
-				//System.out.println("¸¸¹Ç÷ÀµÄË÷ÒıÖµÊÇ£º" + idx);
+				//System.out.println("çˆ¶éª¨éª¼çš„ç´¢å¼•å€¼æ˜¯ï¼š" + idx);
 			}
 		}
 		

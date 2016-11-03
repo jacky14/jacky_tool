@@ -5,9 +5,9 @@ import java.util.List;
 
 public class Farme {
 	
-	List<float[]> poss = new ArrayList<float[]>();//Ò»Ö¡ ËùÓĞ¹Ç÷À¶¥µãÎ»ÖÃĞÅÏ¢
+	List<float[]> poss = new ArrayList<float[]>();//ä¸€å¸§ æ‰€æœ‰éª¨éª¼é¡¶ç‚¹ä½ç½®ä¿¡æ¯
 	
-	List<float[]> rols = new ArrayList<float[]>();//Ò»Ö¡ ËùÓĞ¹Ç÷À¶¥µãĞı×ªĞÅÏ¢
+	List<float[]> rols = new ArrayList<float[]>();//ä¸€å¸§ æ‰€æœ‰éª¨éª¼é¡¶ç‚¹æ—‹è½¬ä¿¡æ¯
 	
 	
 }

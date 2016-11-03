@@ -8,23 +8,23 @@ import dev.mouse.io.LittleEndianInputStream;
 
 
 /**
- * ×éĞÅÏ¢
+ * ç»„ä¿¡æ¯
  * @author DEVILIVED
  *
  */
 public class MS3DGroup {
 
-	private byte flag;			//ÎŞÓÃ
+	private byte flag;			//æ— ç”¨
 	
-	private String name;		//Ãû³Æ
+	private String name;		//åç§°
 	
-	private int[] indicies;		//Ë÷Òı
+	private int[] indicies;		//ç´¢å¼•
 	
 	
-	public Map<Byte,List<Integer>> bone_indicies;//½«Èı½ÇĞÎË÷ÒıĞÅÏ¢ÔÙ·Ö³É²»Í¬¹Ç÷ÀÏÂ
+	public Map<Byte,List<Integer>> bone_indicies;//å°†ä¸‰è§’å½¢ç´¢å¼•ä¿¡æ¯å†åˆ†æˆä¸åŒéª¨éª¼ä¸‹
 	
-	public Map<Byte,List<Float>> bone_tex;//½«Èı½ÇĞÎË÷ÒıĞÅÏ¢ÔÙ·Ö³É²»Í¬¹Ç÷ÀÏÂ
-	private byte materialIndex;	//²ÄÖÊĞòºÅ
+	public Map<Byte,List<Float>> bone_tex;//å°†ä¸‰è§’å½¢ç´¢å¼•ä¿¡æ¯å†åˆ†æˆä¸åŒéª¨éª¼ä¸‹
+	private byte materialIndex;	//æè´¨åºå·
 	
 	
 	

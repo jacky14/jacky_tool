@@ -7,31 +7,31 @@ import dev.mouse.util.TextureManager;
 
 
 /**
- * ²ÄÖÊ
+ * æè´¨
  * @author DEVILIVED
  *
  */
 public class MS3DMaterial {
 	
-	private String name;		//²ÄÖÊÃû³Æ
+	private String name;		//æè´¨åç§°
 	
-	private float[] ambient_color;	//»·¾³¹â
+	private float[] ambient_color;	//ç¯å¢ƒå…‰
 	
-	private float[] diffuse_color;	//ÂşÉä¹â
+	private float[] diffuse_color;	//æ¼«å°„å…‰
 	
-	private float[] specular_color;	//¸ß¹â
+	private float[] specular_color;	//é«˜å…‰
 	
-	private float[] emissive_color;	//×Ô·¢¹â
+	private float[] emissive_color;	//è‡ªå‘å…‰
 	
 	private float shininess;		//0-128
 	
-	private float transparency;		//Í¸Ã÷¶È 0-1
+	private float transparency;		//é€æ˜åº¦ 0-1
 	
-	private byte mode;				//Î´Ê¹ÓÃ
+	private byte mode;				//æœªä½¿ç”¨
 	
-	private String textureName;		//²ÄÖÊÎÄ¼şÃû³Æ
+	private String textureName;		//æè´¨æ–‡ä»¶åç§°
 	
-	private String alphamap;		//Í¸Ã÷²ÄÖÊÎŞÓÃ
+	private String alphamap;		//é€æ˜æè´¨æ— ç”¨
 	
 	private MS3DMaterial() {}
 
@@ -67,14 +67,14 @@ public class MS3DMaterial {
 			mal.textureName = format(is.readString(128));
 			mal.alphamap = is.readString(128);
 			mals[i] = mal;
-			//°ó¶¨²ÄÖÊ
+			//ç»‘å®šæè´¨
 			manager.addTexture(mal.name, mal.textureName,mangname);
 		}
 		return mals;
 	}
 	
 	/**
-	 * Ö»È¡ÎÄ¼şÃû
+	 * åªå–æ–‡ä»¶å
 	 * @param path
 	 * @return
 	 */

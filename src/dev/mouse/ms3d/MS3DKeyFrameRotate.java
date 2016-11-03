@@ -6,15 +6,15 @@ import dev.mouse.io.LittleEndianInputStream;
 import dev.mouse.lib.Vector3f;
 import dev.mouse.lib.Vector4f;
 /**
- * ¹Ø½Ú¹Ø¼üÖ¡Ğı×ªĞÅÏ¢
+ * å…³èŠ‚å…³é”®å¸§æ—‹è½¬ä¿¡æ¯
  * @author DEVILIVED
  *
  */
 public class MS3DKeyFrameRotate {
 
-	private float time;			//Ê±¼ä
+	private float time;			//æ—¶é—´
 	
-	private Vector4f rotate;	//Ğı×ªÏòÁ¿
+	private Vector4f rotate;	//æ—‹è½¬å‘é‡
 
 	public  Vector3f olj;
 	

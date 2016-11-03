@@ -10,12 +10,12 @@ import javax.imageio.ImageIO;
 
 public class ImageSplit {
 	
-	//ĞèÒªÇĞ¸îµÄÍ¼Æ¬ÎÄ¼şµÄÂ·¾¶
+	//éœ€è¦åˆ‡å‰²çš„å›¾ç‰‡æ–‡ä»¶çš„è·¯å¾„
 	public static String path = "C:\\Users\\Administrator\\Desktop\\srcimg\\";
 	
-	//ÇĞ¸îºóÉú³ÉĞ¡Í¼µÄÎÄ¼şµÄÂ·¾¶
+	//åˆ‡å‰²åç”Ÿæˆå°å›¾çš„æ–‡ä»¶çš„è·¯å¾„
 	public static String outpath = "C:\\Users\\Administrator\\Desktop\\outimg\\";
-	//ÇĞ¸îµÄĞ¡Í¼µÄ´óĞ¡
+	//åˆ‡å‰²çš„å°å›¾çš„å¤§å°
 	public static int f_h = 134;
 	public static int f_w = 120;
 	
@@ -23,7 +23,7 @@ public class ImageSplit {
 	public static void main(String[] args) throws Exception {
 		File file = new File(path);
 		String [] fs = file.list();
-		//»ñµÃĞèÒª´¦ÀíµÄÎÄ¼şÁĞ±í
+		//è·å¾—éœ€è¦å¤„ç†çš„æ–‡ä»¶åˆ—è¡¨
 		List<String> listfs = new ArrayList<String>();
 		for(int i = 0 ;i<fs.length;i++){
 			boolean isTag = false;
@@ -90,7 +90,7 @@ public class ImageSplit {
 		
 		for(int i=0;i<h;i++){
 			for(int j=0;j<w;j++){
-				int hanghao = i/f_h;//µ±Ç°´¦ÀíÏñËØµ¥ÔªµÄĞĞºÅ
+				int hanghao = i/f_h;//å½“å‰å¤„ç†åƒç´ å•å…ƒçš„è¡Œå·
 				int liehao = j/f_w;
 				
 				int local_h = i%f_h;

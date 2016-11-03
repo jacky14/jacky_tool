@@ -47,7 +47,7 @@ public class PngTest {
 			outdir = out_root_path+ tmpstr;
 			dir(sourcedir, outdir);
 		}
-		System.out.println("ʱ�䣺 " + (System.currentTimeMillis() - s));
+		System.out.println("时间： " + (System.currentTimeMillis() - s));
 	}
 	public static void dir(String sourcedir,String outdir) throws Exception{
 		File file =new File(sourcedir);

@@ -2,16 +2,16 @@ package dev.mouse.lib;
 
 
 /**
- * 4 ¡Á 4¾ØÕóÔËËã
+ * 4 Ã— 4çŸ©é˜µè¿ç®—
  * @author DEVILIVED
  *
  */
 public class Matrix4f {
 	
-	private float[][] matrix = new float[4][4];	//4*4¾ØÕó
+	private float[][] matrix = new float[4][4];	//4*4çŸ©é˜µ
 	
 	/**
-	 * »ñµÃ¾ØÕóÊı×é
+	 * è·å¾—çŸ©é˜µæ•°ç»„
 	 * @return
 	 */
 	public final float[][] getMatrixArray() {
@@ -19,7 +19,7 @@ public class Matrix4f {
 	}
 	
 	/**
-	 * ÖØÖÃ¾ØÕó
+	 * é‡ç½®çŸ©é˜µ
 	 */
 	public final void loadIdentity() {
 		for(int i=0; i<4; i++) {
@@ -33,7 +33,7 @@ public class Matrix4f {
 	}
 	
 	/**
-	 * ÉèÖÃÎ»ÖÃ
+	 * è®¾ç½®ä½ç½®
 	 * @param v
 	 */
 	public final void setTranslation(Vector3f v) {
@@ -51,7 +51,7 @@ public class Matrix4f {
 	}
 	
 	/**
-	 * Ğı×ª
+	 * æ—‹è½¬
 	 * @param angles
 	 */
 	public final void setRotationRadians(float[] angles) {
@@ -59,7 +59,7 @@ public class Matrix4f {
 	}
 	
 	/**
-	 * Ğı×ª
+	 * æ—‹è½¬
 	 * @param angles
 	 */
 	public final void setRotationRadians(final Vector3f angles) {
@@ -67,7 +67,7 @@ public class Matrix4f {
 	}
 	
 	/**
-	 * ÉèÖÃĞı×ª   ÓÉÅ·À­½Ç×ª»»µ½Ğı×ª¾ØÕó
+	 * è®¾ç½®æ—‹è½¬   ç”±æ¬§æ‹‰è§’è½¬æ¢åˆ°æ—‹è½¬çŸ©é˜µ
 	 */
 	public final void setRotationRadians(float x, float y, float z) {
 		final double cr = Math.cos(x);
@@ -93,7 +93,7 @@ public class Matrix4f {
 	}
 	
 	/**
-	 * µ±Ç°¾ØÕóÓëmÏà³Ë ²¢¸³Öµ¸øµ±Ç°¶ÔÏó
+	 * å½“å‰çŸ©é˜µä¸mç›¸ä¹˜ å¹¶èµ‹å€¼ç»™å½“å‰å¯¹è±¡
 	 * @param m
 	 * @return this
 	 */
@@ -103,7 +103,7 @@ public class Matrix4f {
     }
 	
 	/**
-	 * »ñµÃm1¾ØÕó Óë m2¾ØÕó Ïà³ËºóµÄ¾ØÕó ²¢¸³Öµ¸øµ±Ç°¾ØÕó¶ÔÏó
+	 * è·å¾—m1çŸ©é˜µ ä¸ m2çŸ©é˜µ ç›¸ä¹˜åçš„çŸ©é˜µ å¹¶èµ‹å€¼ç»™å½“å‰çŸ©é˜µå¯¹è±¡
 	 * @param m1
 	 * @param m2
 	 * @return this
@@ -116,19 +116,19 @@ public class Matrix4f {
 	
 	
 	/**
-	 * m1Óëm2Ïà³Ë ²¢·µ»ØĞÂµÄ¾ØÕó¶ÔÏó
+	 * m1ä¸m2ç›¸ä¹˜ å¹¶è¿”å›æ–°çš„çŸ©é˜µå¯¹è±¡
 	 * @param m1
 	 * @param m2
-	 * @return ĞÂµÄ¾ØÕó¶ÔÏó
+	 * @return æ–°çš„çŸ©é˜µå¯¹è±¡
 	 */
 	public final Matrix4f mulForNewInstance(Matrix4f m1, Matrix4f m2) {
 		return m1.mulForNewInstance(m2);
     }
 	
 	/**
-	 * µ±Ç°¾ØÕóÓëmÏà³Ë ²¢·µ»ØĞÂµÄ¾ØÕó¶ÔÏó
+	 * å½“å‰çŸ©é˜µä¸mç›¸ä¹˜ å¹¶è¿”å›æ–°çš„çŸ©é˜µå¯¹è±¡
 	 * @param m
-	 * @return ĞÂµÄ¾ØÕó¶ÔÏó
+	 * @return æ–°çš„çŸ©é˜µå¯¹è±¡
 	 */
 	public final Matrix4f mulForNewInstance(Matrix4f m) {
 		Matrix4f matrix4f = new Matrix4f();
@@ -143,7 +143,7 @@ public class Matrix4f {
     }
 	
 	/**
-	 * ÉèÖÃ
+	 * è®¾ç½®
 	 * @param m
 	 */
 	public final void set(Matrix4f m) {
@@ -164,7 +164,7 @@ public class Matrix4f {
 	}
 	
 	/**
-	 * ÕÕ³­µÄ  ÓÉËÄÔªÊı×ª»»µ½Ğı×ª¾ØÕó
+	 * ç…§æŠ„çš„  ç”±å››å…ƒæ•°è½¬æ¢åˆ°æ—‹è½¬çŸ©é˜µ
 	 * @param x
 	 * @param y
 	 * @param z
@@ -194,7 +194,7 @@ public class Matrix4f {
     }
 	
 	/**
-	 * ¸´ÖÆ±¾Éí´´½¨Ò»¸öĞÂµÄ¾ØÕó
+	 * å¤åˆ¶æœ¬èº«åˆ›å»ºä¸€ä¸ªæ–°çš„çŸ©é˜µ
 	 * @return
 	 */
 	public Matrix4f copy(){
@@ -208,20 +208,20 @@ public class Matrix4f {
 	}
 	
 	/**
-	 * ÕÕ³­µÄ ¶¥µãµÄÎ»ÒÆ¡¢Ğı×ª   ½øĞĞĞı×ª±ä»¯Ê±Ó¦ÏÈ½øĞĞ·´ÏòÒÆ¶¯¾ØÕóÖĞµÄÎ»ÒÆĞÅÏ¢£¬¾­¹ıĞı×ª²Ù×÷ºóÔÙ¼ÓÉÏÎ»ÒÆĞÅÏ¢
-	 * ÕâÀïµÄvĞı×ªºó²¢Ã»ÓĞ¼ÓÉÏÎ»ÒÆĞÅÏ¢£¬£¨ÎÒÒ²ÒÉ»óÖĞ£¿£¿£¿£¿£¿£¿£¿£¿£¿£¿£¿£¿£¿£©
+	 * ç…§æŠ„çš„ é¡¶ç‚¹çš„ä½ç§»ã€æ—‹è½¬   è¿›è¡Œæ—‹è½¬å˜åŒ–æ—¶åº”å…ˆè¿›è¡Œåå‘ç§»åŠ¨çŸ©é˜µä¸­çš„ä½ç§»ä¿¡æ¯ï¼Œç»è¿‡æ—‹è½¬æ“ä½œåå†åŠ ä¸Šä½ç§»ä¿¡æ¯
+	 * è¿™é‡Œçš„væ—‹è½¬åå¹¶æ²¡æœ‰åŠ ä¸Šä½ç§»ä¿¡æ¯ï¼Œï¼ˆæˆ‘ä¹Ÿç–‘æƒ‘ä¸­ï¼Ÿï¼Ÿï¼Ÿï¼Ÿï¼Ÿï¼Ÿï¼Ÿï¼Ÿï¼Ÿï¼Ÿï¼Ÿï¼Ÿï¼Ÿï¼‰
 	 * 
-	 * ¸Ã¾ØÕóÎª½«¶¥µã±ä»»µ½¹Ç÷À±¾µØ×ø±êÖĞÈ¥£¬ÕâÀïÊÇ³ËÒÔ¾ø¶Ô¾ØÕóµÄÄæ¾ØÕó
+	 * è¯¥çŸ©é˜µä¸ºå°†é¡¶ç‚¹å˜æ¢åˆ°éª¨éª¼æœ¬åœ°åæ ‡ä¸­å»ï¼Œè¿™é‡Œæ˜¯ä¹˜ä»¥ç»å¯¹çŸ©é˜µçš„é€†çŸ©é˜µ
 	 * @param point
 	 * @return
 	 */
 	public final Vector3f invTransformAndRotate(Vector3f point) {
         Vector3f v = new Vector3f();
-        //Î»ÒÆ
+        //ä½ç§»
         float x = point.getX() - this.matrix[0][3];
         float y = point.getY() - this.matrix[1][3];
         float z = point.getZ() - this.matrix[2][3];
-        //Ğı×ª
+        //æ—‹è½¬
         v.setX(this.matrix[0][0] * x + this.matrix[1][0] * y + this.matrix[2][0] * z);
         v.setY(this.matrix[0][1] * x + this.matrix[1][1] * y + this.matrix[2][1] * z);
         v.setZ(this.matrix[0][2] * x + this.matrix[1][2] * y + this.matrix[2][2] * z);
@@ -230,7 +230,7 @@ public class Matrix4f {
 	
 	
 	/**
-	 * 2014/10/07 ĞÔÄÜÓÅ»¯£ºÔÚ¶¥µã±ä»»µ½ÆÁÄ»×ø±êÊ±£¬¼ÆËãÒ»¸ö×îÖÕµÄ¾ØÕó
+	 * 2014/10/07 æ€§èƒ½ä¼˜åŒ–ï¼šåœ¨é¡¶ç‚¹å˜æ¢åˆ°å±å¹•åæ ‡æ—¶ï¼Œè®¡ç®—ä¸€ä¸ªæœ€ç»ˆçš„çŸ©é˜µ
 	 */
 	public final float[] getBZ(){
 		float[] f=new float[16];
@@ -245,7 +245,7 @@ public class Matrix4f {
 	}
 	
 	/**
-	 * ÕÕ³­µÄ    ÏòÁ¿Óë¾ØÕó³Ë·¨
+	 * ç…§æŠ„çš„    å‘é‡ä¸çŸ©é˜µä¹˜æ³•
 	 * @param point
 	 * @return
 	 */

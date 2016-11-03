@@ -14,40 +14,40 @@ public class Frame {
 	}
 
 	/**
-	 * Àý£º
+	 * ä¾‹ï¼š
 	 * <key>1003_role/0000</key>
 	 */
 	public String key;
 	/**
-	 * Àý£º
+	 * ä¾‹ï¼š
 	 *  <key>frame</key>
 	 *	<string>{{830,366},{102,162}}</string>
 	 */
 	public int frame[][];
 	
 	/**
-	 * Àý£º
+	 * ä¾‹ï¼š
 	 *  <key>offset</key>
 	 *	<string>{-10,-38}</string>
 	 */
 	public float offset[];
 	
 	/**
-	 * Àý£º
+	 * ä¾‹ï¼š
 	 *  <key>rotated</key>
 	 *	<true/>
 	 */
 	public boolean rotated;
 	
 	/**
-	 * Àý£º
+	 * ä¾‹ï¼š
 	 *  <key>sourceColorRect</key>
 	 *	<string>{{419,277},{102,162}}</string>
 	 */
 	public int sourceColorRect[][];
 	
 	/**
-	 * Àý£º
+	 * ä¾‹ï¼š
 	 *  <key>sourceSize</key>
 	 *	<string>{960,640}</string>
 	 */

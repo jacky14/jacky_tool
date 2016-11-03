@@ -22,7 +22,7 @@ public class Ms3dRead {
 		mo.save();
 		
 		
-		//第三人称模式下武器变换到本地坐标空间
+		//绗笁浜虹О妯″紡涓嬫鍣ㄥ彉鎹㈠埌鏈湴鍧愭爣绌洪棿
 		/*MS3DModel akp = MS3DModel.load(new FileInputStream("F:\\mypro\\CounterStrike\\assets\\p_ak47.ms3d"), null, manager, null);
 		for(int i=0;i<akp.getVertexs().length;i++){
 			Vector3f v3 = ms3d.joints[26].getAbsolute().invTransformAndRotate(akp.getVertexs()[i].getVertex());

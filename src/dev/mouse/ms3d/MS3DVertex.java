@@ -7,25 +7,25 @@ import dev.mouse.lib.Vector3f;
 
 
 /**
- * 顶点信息
+ * 椤剁偣淇℃伅
  * @author DEVILIVED
  *
  */
 public class MS3DVertex {
 	
-	private byte flag;		//无用
+	private byte flag;		//鏃犵敤
 	
-	private Vector3f vertex;	//顶点信息 不会改变
+	private Vector3f vertex;	//椤剁偣淇℃伅 涓嶄細鏀瑰彉
 	
-	private Vector3f buffer;	//顶点缓冲
+	private Vector3f buffer;	//椤剁偣缂撳啿
 	
-	private byte bone;			//骨骼ID
+	private byte bone;			//楠ㄩID
 	
-	private byte none;			//保留无用
+	private byte none;			//淇濈暀鏃犵敤
 	
-	private Vector3f verbuff;//骨骼本地坐标值，通常第一次加载时计算完成，以后无需计算
+	private Vector3f verbuff;//楠ㄩ鏈湴鍧愭爣鍊硷紝閫氬父绗竴娆″姞杞芥椂璁＄畻瀹屾垚锛屼互鍚庢棤闇�璁＄畻
 	
-	private Vector3f newverbuff;//武器模型骨骼本地坐标值，通常第一次加载时计算完成，以后无需计算
+	private Vector3f newverbuff;//姝﹀櫒妯″瀷楠ㄩ鏈湴鍧愭爣鍊硷紝閫氬父绗竴娆″姞杞芥椂璁＄畻瀹屾垚锛屼互鍚庢棤闇�璁＄畻
 	
 	
 	public Vector3f getNewverbuff() {
@@ -51,7 +51,7 @@ public class MS3DVertex {
 	private MS3DVertex() {}
 
 	/**
-	 * 读取顶点信息
+	 * 璇诲彇椤剁偣淇℃伅
 	 * @param is
 	 * @return
 	 * @throws IOException 

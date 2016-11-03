@@ -11,27 +11,27 @@ import dev.mouse.lib.Vector4f;
 
 
 /**
- * ¹Ø½ÚĞÅÏ¢
+ * å…³èŠ‚ä¿¡æ¯
  * @author DEVILIVED
  *
  */
 public class MS3DJoint {
 	
-	private byte flag;	//ÎŞÓÃ
+	private byte flag;	//æ— ç”¨
 	
-	private String name;	//¹Ø½ÚÃû³Æ
+	private String name;	//å…³èŠ‚åç§°
 	
-	private String parentName;	//¸¸¹Ø½ÚÃû³Æ
+	private String parentName;	//çˆ¶å…³èŠ‚åç§°
 	
-	private MS3DJoint parent;		//¸¸¹Ø½Ú
+	private MS3DJoint parent;		//çˆ¶å…³èŠ‚
 	
-	private Vector3f rotate;	//³õÊ¼Ğı×ªÖµ
+	private Vector3f rotate;	//åˆå§‹æ—‹è½¬å€¼
 	
-	private Vector3f position;	//³õÊ¼Î»ÖÃ
+	private Vector3f position;	//åˆå§‹ä½ç½®
 	
-	private MS3DKeyFrameRotate[] rotates;	//¹Ø¼üÖ¡Ğı×ªÖµ
+	private MS3DKeyFrameRotate[] rotates;	//å…³é”®å¸§æ—‹è½¬å€¼
 	
-	private MS3DKeyFramePosition[] positions;	//¹Ø¼üÖ¡Î»ÖÃ×ø±ê
+	private MS3DKeyFramePosition[] positions;	//å…³é”®å¸§ä½ç½®åæ ‡
 	
 	
 	
@@ -80,17 +80,17 @@ public class MS3DJoint {
 	public void setMatrix(Matrix4f matrix) {
 		this.matrix = matrix;
 	}
-	private Matrix4f relative;			//Ïà¶Ô¾ØÕó
+	private Matrix4f relative;			//ç›¸å¯¹çŸ©é˜µ
 	
-	private Matrix4f absolute;			//¾ø¶Ô¾ØÕó
+	private Matrix4f absolute;			//ç»å¯¹çŸ©é˜µ
 	
-	public Matrix4f matrix;			//±ä»»¾ØÕó
+	public Matrix4f matrix;			//å˜æ¢çŸ©é˜µ
 	
 	
-	public Matrix4f am;//×Ü±ä»Ã¾ØÕó
+	public Matrix4f am;//æ€»å˜å¹»çŸ©é˜µ
 	
 	/**
-	 * ¼ÓÔØ¹Ø½Ú²¿·Ö
+	 * åŠ è½½å…³èŠ‚éƒ¨åˆ†
 	 * @param is
 	 * @return
 	 * @throws IOException
@@ -124,27 +124,27 @@ public class MS3DJoint {
 			if(numKeyFramesPos > 0)
 				joint.positions = MS3DKeyFramePosition.load(is, numKeyFramesPos);
 			joints[i] = joint;
-			//²éÕÒ¸¸¹Ø½Ú
+			//æŸ¥æ‰¾çˆ¶å…³èŠ‚
 			map.put(joint.name, joint);
-			//»ñµÃ¸¸¹Ø½Ú
+			//è·å¾—çˆ¶å…³èŠ‚
 			joint.parent = map.get(joint.parentName); 
 			
-			//ÉèÖÃÏà¶Ô¾ØÕó
+			//è®¾ç½®ç›¸å¯¹çŸ©é˜µ
 			joint.relative = new Matrix4f();
 			joint.relative.loadIdentity();
-			//ÉèÖÃĞı×ª
+			//è®¾ç½®æ—‹è½¬
 			joint.relative.setRotationRadians(joint.rotate);
-			//ÉèÖÃÎ»ÒÆ
+			//è®¾ç½®ä½ç§»
 			joint.relative.setTranslation(joint.position);
-			//ÉèÖÃ¾ø¶Ô¾ØÕó
+			//è®¾ç½®ç»å¯¹çŸ©é˜µ
 			joint.absolute = new Matrix4f();
 			joint.absolute.loadIdentity();
-			//ÊÇ·ñÓĞ¸¸¹Ø½Ú
+			//æ˜¯å¦æœ‰çˆ¶å…³èŠ‚
 			if(joint.parent != null) {
-				//ÓĞ¸¸¹Ø½Ú
+				//æœ‰çˆ¶å…³èŠ‚
 				joint.absolute.mul(joint.parent.absolute, joint.relative);
 			} else {
-				//ÎŞ¸¸¹Ø½Ú
+				//æ— çˆ¶å…³èŠ‚
 				joint.absolute.set(joint.relative);
 			}
 			
@@ -156,28 +156,28 @@ public class MS3DJoint {
 
 	
 	public final void update(float time,Boolean isman) {
-		//Ã»ÓĞĞı×ªĞÅÏ¢£¬Ã»ÓĞÎ»ÖÃÆ«ÒÆĞÅÏ¢
+		//æ²¡æœ‰æ—‹è½¬ä¿¡æ¯ï¼Œæ²¡æœ‰ä½ç½®åç§»ä¿¡æ¯
 		if(this.rotates == null && this.positions == null) {
 			if(this.matrix==null)
 				this.matrix=new Matrix4f();
 			this.matrix.set(this.absolute);
 			return;
 		}
-		//ÏÈĞı×ª
+		//å…ˆæ—‹è½¬
 		Matrix4f matrix = this.rotate(time);
-		//Î»ÒÆ
+		//ä½ç§»
 		
 		Vector3f v3=this.position(time,isman);
 		
 		matrix.setTranslation(v3);
-		//Óë×ÔÉíÏà¶Ô¾ØÕóÏà³Ë
+		//ä¸è‡ªèº«ç›¸å¯¹çŸ©é˜µç›¸ä¹˜
 		matrix.mul(this.relative, matrix);
-		//ÊÇ·ñÓĞ¸¸¹Ø½Ú
+		//æ˜¯å¦æœ‰çˆ¶å…³èŠ‚
 		if(this.parent != null) {
-			//ÓĞ¸¸¹Ø½Ú
+			//æœ‰çˆ¶å…³èŠ‚
 			this.matrix = matrix.mul(this.parent.matrix, matrix);
 		} else {
-			//ÎŞ¸¸¹Ø½Ú
+			//æ— çˆ¶å…³èŠ‚
 			this.matrix = matrix;
 		}
 		//am=new Matrix4f();
@@ -187,7 +187,7 @@ public class MS3DJoint {
 		
 	}
 	/**
-	 * ²åÖµ¼ÆËãĞı×ª
+	 * æ’å€¼è®¡ç®—æ—‹è½¬
 	 * @param time
 	 * @return
 	 */
@@ -216,7 +216,7 @@ public class MS3DJoint {
 	}
 	
 	/**
-	 * ²åÖµ¼ÆËãÎ»ÒÆ
+	 * æ’å€¼è®¡ç®—ä½ç§»
 	 * @param time
 	 * @return
 	 */
@@ -278,7 +278,7 @@ public class MS3DJoint {
 		return parent;
 	}
 /**
- * //±ä»»¾ØÕó
+ * //å˜æ¢çŸ©é˜µ
  * @return
  */
 	public final Matrix4f getMatrix() {
@@ -290,7 +290,7 @@ public class MS3DJoint {
 	}
 
 	/**
-	 * //¾ø¶Ô¾ØÕó
+	 * //ç»å¯¹çŸ©é˜µ
 	 * @return
 	 */
 	public final Matrix4f getAbsolute() {

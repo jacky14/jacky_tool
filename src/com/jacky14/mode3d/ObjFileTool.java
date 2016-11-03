@@ -50,7 +50,7 @@ public class ObjFileTool {
           String name = tmp.getName();
           if(".obj".equals(name.substring(name.length()-4))){
 
-             System.out.println("OBJÎÄ¼ş:'"+name+"'¿ªÊ¼½âÎö..........");
+             System.out.println("OBJæ–‡ä»¶:'"+name+"'å¼€å§‹è§£æ..........");
              long start  = System.currentTimeMillis();
              ObjFileLoder ol = new ObjFileLoder();
              ol.loadStrforInput(new FileInputStream(tmp)) ;
@@ -71,7 +71,7 @@ public class ObjFileTool {
               }
 
               is.close();
-              System.out.println("OBJÎÄ¼ş:'"+name+"'½âÎöÍê³É¡£ºÄÊ±£º"+(System.currentTimeMillis()-start)+"ºÁÃë.");
+              System.out.println("OBJæ–‡ä»¶:'"+name+"'è§£æå®Œæˆã€‚è€—æ—¶ï¼š"+(System.currentTimeMillis()-start)+"æ¯«ç§’.");
           }
       }
 

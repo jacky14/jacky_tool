@@ -1,16 +1,16 @@
 package dev.mouse.util;
 /**
- * fps¼ÆËã
+ * fpsè®¡ç®—
  * @author DEVILIVED
  *
  */
 public class FPSCalc {
 
-	private long currentTime;	//µ±Ç°Ê±¼ä
+	private long currentTime;	//å½“å‰æ—¶é—´
 	
-	private long interval;		//¼ä¸ôÊ±¼ä
+	private long interval;		//é—´éš”æ—¶é—´
 	
-	private float fps;			//Ö¡
+	private float fps;			//å¸§
 	
 	public final void start() {
 		this.currentTime = System.currentTimeMillis();

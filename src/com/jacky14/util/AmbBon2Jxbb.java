@@ -66,15 +66,15 @@ public class AmbBon2Jxbb {
     }
     public static void genFile(String fname) throws IOException {
 
-        //¹«ÓÃÎäÆ÷¶¯×÷¶¯»­
+        //å…¬ç”¨æ­¦å™¨åŠ¨ä½œåŠ¨ç”»
        AmbBone comm=  AmbAnsys.ansysAmb(Skc2Jbx.thisModuleAssetsPath + "character"+".amb");
        //AmbBone ab=  AmbAnsys.ansysAmb(Skc2Jbx.thisModuleAssetsPath + fname+".amb");
 
         List<Frame> framesnewall = new ArrayList<>();
 
-       //Ìí¼ÓÈËÎï±¾Éí¶¯×÷
+       //æ·»åŠ äººç‰©æœ¬èº«åŠ¨ä½œ
         //addframe(myani,ab.frames,framesnewall);
-        //Ìí¼Ó¹«ÓÃ¶¯×÷
+        //æ·»åŠ å…¬ç”¨åŠ¨ä½œ
         //ex dao bishou jian
         //addframe(ex,comm.frames,framesnewall);
 
@@ -96,7 +96,7 @@ public class AmbBon2Jxbb {
             }
         }
         float [][] matmp =new float [framesnewall.size()][];
-        //´¦Àí±ä»»¶¥µãĞÅÏ¢
+        //å¤„ç†å˜æ¢é¡¶ç‚¹ä¿¡æ¯
         LXbone.mode = 0;
         List<LXbone> bones= LXbone.get_bone(new FileInputStream(Skc2Jbx.thisModuleAssetsPath + fname+".bnc"));
         for(int i=0;i<tmp.length;i++){
@@ -106,7 +106,7 @@ public class AmbBon2Jxbb {
             for(int j=0;j<len;j++){
                 int indextmp = j*4;
                 LXbone bone=bones.get(j);
-                Matrix XuanZhuan =new Quaternion(q[indextmp + 1],q[indextmp + 2], q[indextmp + 3], q[indextmp]).getRotationMatrix();//µ±Ç°Ö¡Ğı×ª
+                Matrix XuanZhuan =new Quaternion(q[indextmp + 1],q[indextmp + 2], q[indextmp + 3], q[indextmp]).getRotationMatrix();//å½“å‰å¸§æ—‹è½¬
                 XuanZhuan.translate(bone.vpos[0], bone.vpos[1],bone.vpos[2]);
                 if(bone.parentIndex!=-1){
                     XuanZhuan.matMul(bones.get(bone.parentIndex).BianHuaJuZhen);

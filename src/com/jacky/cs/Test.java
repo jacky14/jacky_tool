@@ -8,9 +8,9 @@ public class Test {
 		Matrix4f juzhen = new Matrix4f();
 		juzhen.loadIdentity();
 		
-		//ÉèÖÃĞı×ª
+		//è®¾ç½®æ—‹è½¬
 		juzhen.setRotationRadians(new  Vector3f(-1.5707964f, -1.570795f, 0.0f));//[-1.5707964, -1.570795, 0.0]
-		//ÉèÖÃÎ»ÒÆ
+		//è®¾ç½®ä½ç§»
 		juzhen.setTranslation(new  Vector3f(0.233849f, 38.19215f, 2.25168f));//[0.233849, 38.19215, 2.25168]
 		
 		double x = Math.atan2(juzhen.getMatrixArray()[2][1],juzhen.getMatrixArray()[2][2]);

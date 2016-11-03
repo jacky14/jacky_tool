@@ -31,7 +31,7 @@ public class MapUtile {
     }
 
     /**
-     * ½«Ö¸¶¨Ä¿Â¼ÏÂjpgÎÄ¼şºó×ºĞŞ¸ÄÎª´óĞ´JPGºó×º
+     * å°†æŒ‡å®šç›®å½•ä¸‹jpgæ–‡ä»¶åç¼€ä¿®æ”¹ä¸ºå¤§å†™JPGåç¼€
      * @param path
      */
     public static void rename(String path){
@@ -51,27 +51,27 @@ public class MapUtile {
         }
     }
 
-    //ËÄ·½ÕóÆÁ±ÎÁĞ±í
+    //å››æ–¹é˜µå±è”½åˆ—è¡¨
     public static Set<String> set06 = new HashSet<>();
 
-    //³ãÑ©³ÇÆÁ±ÎÁĞ±í
+    //ç‚½é›ªåŸå±è”½åˆ—è¡¨
     public static Set<String> set04 = new HashSet<>();
 
-    //½ğ»ª³ÇÆÁ±ÎÁĞ±í
+    //é‡‘ååŸå±è”½åˆ—è¡¨
     public static Set<String> set13 = new HashSet<>();
     public static Set<String> set13_jxb = new HashSet<>();
 
-    //ÂåÑô³ÇÆÁ±ÎÁĞ±í
+    //æ´›é˜³åŸå±è”½åˆ—è¡¨
     public static Set<String> set19 = new HashSet<>();
     public static Set<String> set19_jxb = new HashSet<>();
 
 
-    //Ò»ÏßÌìobjÆÁ±ÎÁĞ±í
+    //ä¸€çº¿å¤©objå±è”½åˆ—è¡¨
     public static Set<String> set03 = new HashSet<>();
     public static Set<String> set03_jxb = new HashSet<>();
 
 
-    //»ÊÌì³ÇobjÆÁ±ÎÁĞ±í
+    //çš‡å¤©åŸobjå±è”½åˆ—è¡¨
     public static Set<String> set05 = new HashSet<>();
     public static Set<String> set05_jxb = new HashSet<>();
     static{
@@ -108,7 +108,7 @@ public class MapUtile {
 
 
 
-        //±»ÆÁ±Î¶ÔÏóµÄÁĞ±í sn06 ËÄ·½Õó
+        //è¢«å±è”½å¯¹è±¡çš„åˆ—è¡¨ sn06 å››æ–¹é˜µ
         String[] sss06 = new String[]{"wu","wu02","wu03","Plane02","Plane30",
                 "Plane29","Object01","Line03","Box18","wu01","Box31","Box34",
                 "Box28","Box25","Box22","Box07","Box06","Box05","Box04","Box03","Box12",
@@ -127,7 +127,7 @@ public class MapUtile {
         }
 
 
-        //½ğ»ª³Ç
+        //é‡‘ååŸ
         String[] sss13 = new String[]{
                 "Sphere01","Sphere03","Sphere02","Box02","Plane08","Object44","Object08","Box103","Plane03","Plane03","Object66","Box157","Object65","Box158","Box01","Object15","Box162","Object70","Object64","Box159","Object68","Box160","Object71","Box105","Object13","Box108","Box107","Object12","Object69","Box161","Box101","Object06","Box100","Object05","Box109","Object14","Object93","Object129",
                 "Object131"
@@ -415,18 +415,18 @@ public class MapUtile {
     public static Properties pt = new Properties();
 
     /**
-     * ½«µ±Ç°Ä£ĞÍ×ª»¯ÎªÒ»¸öÒÔÌùÍ¼Îª·Ö×éµÄÄ£ĞÍ¶ÔÏó
+     * å°†å½“å‰æ¨¡å‹è½¬åŒ–ä¸ºä¸€ä¸ªä»¥è´´å›¾ä¸ºåˆ†ç»„çš„æ¨¡å‹å¯¹è±¡
      * @param gf
      */
     public static void chick3(GmbFileFormat gf){
 
-        int type =0;//0µ¼³öÎªjxb¸ñÊ½   1 µ¼³öobj¸ñÊ½
+        int type =0;//0å¯¼å‡ºä¸ºjxbæ ¼å¼   1 å¯¼å‡ºobjæ ¼å¼
 
 
-        //¼ÇÂ¼ÎÆÀíÃû³Æ¶ÔÓ¦Ò»¸öÄ£ĞÍ»º´æ
+        //è®°å½•çº¹ç†åç§°å¯¹åº”ä¸€ä¸ªæ¨¡å‹ç¼“å­˜
         Map<String,MapMode> modemap = new HashMap<>();
 
-        //<Ä£ĞÍÃû³Æ,<¾ÉË÷Òıid,ĞÂË÷Òıid>>
+        //<æ¨¡å‹åç§°,<æ—§ç´¢å¼•id,æ–°ç´¢å¼•id>>
         //Map<String,Map<Integer,Integer>> tex_idx_map = new HashMap<>();
         for(int i=0;i<gf.ObjectList.size();i++){
             GMBObj gmb = gf.ObjectList.get(i);
@@ -509,7 +509,7 @@ public class MapUtile {
                 mm.idx.add(newttid);
             }
         }
-        //½«¼ÆËãºÃµÄÄ£ĞÍ±£´æÎªjxbÎÄ¼ş
+        //å°†è®¡ç®—å¥½çš„æ¨¡å‹ä¿å­˜ä¸ºjxbæ–‡ä»¶
 
         if(type==0){
             Iterator<String> strkey =   modemap.keySet().iterator();
@@ -526,7 +526,7 @@ public class MapUtile {
                            System.out.print(" ,\"" +sk.substring(0,sk.length()-4) +"\""  );
                        }else{
                            fname = sk+".jxb";
-                           System.out.print("Ä£ĞÍ¿ÉÄÜ²»´æÔÚ¶ÔÓ¦ÌùÍ¼£¬Çë¼ì²é");
+                           System.out.print("æ¨¡å‹å¯èƒ½ä¸å­˜åœ¨å¯¹åº”è´´å›¾ï¼Œè¯·æ£€æŸ¥");
                        }
 
                        jd.savedata(fname);
@@ -538,7 +538,7 @@ public class MapUtile {
 
             }
         }else if(type == 1){
-            //½«¼ÆËãºÃµÄÄ£ĞÍÎÄ¼şµ¼³öÎªobj£¬
+            //å°†è®¡ç®—å¥½çš„æ¨¡å‹æ–‡ä»¶å¯¼å‡ºä¸ºobjï¼Œ
             String filename = "ObjFileUtile" + System.currentTimeMillis()+".obj";
             String allfile = "C:\\Users\\Administrator\\Desktop\\map\\" + filename ;
             File tmp = new File(allfile);
@@ -593,7 +593,7 @@ public class MapUtile {
 
 
     /**
-     * µ¼³öÎªÒ»¸öÍ³Ò»µÄobjÎÄ¼ş
+     * å¯¼å‡ºä¸ºä¸€ä¸ªç»Ÿä¸€çš„objæ–‡ä»¶
      * @param gf
      */
     public static void chick2(GmbFileFormat gf) throws Exception {
@@ -610,7 +610,7 @@ public class MapUtile {
         tmp.createNewFile();
         PrintWriter pw = new PrintWriter(tmp);
 
-        //´¦Àíµ¥¸ögmb¡ªobjÎÄ¼şÖĞµÄÎÆÀíÊı¾İ
+        //å¤„ç†å•ä¸ªgmbâ€”objæ–‡ä»¶ä¸­çš„çº¹ç†æ•°æ®
         /*for(int i=0;i<gf.ObjectList.size();i++){
             int[] tidx = gf.ObjectList.get(i).Triangle;
             int[] unkonw = gf.ObjectList.get(i).unknow;
@@ -619,7 +619,7 @@ public class MapUtile {
 
             for(int j=0;j<tidx.length/3;j++){
                 String key = String.valueOf(unkonw[j]);
-                key = "sn06/"+pt.getProperty(key);//plistÖĞÎÆÀíkey
+                key = "sn06/"+pt.getProperty(key);//plistä¸­çº¹ç†key
                 int first = tidx[j*3];
                 float adsf[] =   pd.transition(key,new float[]{gf.ObjectList.get(i).UV[first*2],gf.ObjectList.get(i).UV[first*2+1]});
                 tmpuv[first*2] = adsf[0];
@@ -650,7 +650,7 @@ public class MapUtile {
 
 
 
-        //µ¼³öÕûÌågmbÎÄ¼şÖĞÊı¾İµ½objÎÄ¼ş
+        //å¯¼å‡ºæ•´ä½“gmbæ–‡ä»¶ä¸­æ•°æ®åˆ°objæ–‡ä»¶
         int idx = 0;
         for(int i=0;i<gf.ObjectList.size();i++){
             float[] v  = gf.ObjectList.get(i).Positon;
@@ -689,11 +689,11 @@ public class MapUtile {
 
 
     /**
-     * ¼ì²âµØÍ¼ÎÄ¼şÊ¹ÓÃµ½µÄÎÆÀí×ÊÔ´£¬£¨É¾³ıÎŞÓÃÖØ¸´µÄµØÍ¼ÎÆÀí£©
+     * æ£€æµ‹åœ°å›¾æ–‡ä»¶ä½¿ç”¨åˆ°çš„çº¹ç†èµ„æºï¼Œï¼ˆåˆ é™¤æ— ç”¨é‡å¤çš„åœ°å›¾çº¹ç†ï¼‰
      * @param gf
      */
     public static void chick1(GmbFileFormat gf){
-        //ÎÆÀíË÷ÒıµÄ¼ÆÊı
+        //çº¹ç†ç´¢å¼•çš„è®¡æ•°
         Map<Integer,Integer> texcount = new HashMap<>();
 
         for(int i=0;i<gf.ObjectList.size();i++){
@@ -726,7 +726,7 @@ public class MapUtile {
     }
 
     /**
-     * ±£´æÎªµ¥¸öobjÎÄ¼ş
+     * ä¿å­˜ä¸ºå•ä¸ªobjæ–‡ä»¶
      * @param gf
      */
     public static void save2Obj(GmbFileFormat gf){

@@ -70,7 +70,7 @@ public class Skc2Jbx {
 
         
         List<LXbone> bones= LXbone.get_bone(new FileInputStream(thisModuleAssetsPath + fname+".bnc"));
-        for(int i=0;i<30;i++){//处理骨骼绝对矩阵变化
+        for(int i=0;i<30;i++){//澶勭悊楠ㄩ缁濆鐭╅樀鍙樺寲
             LXbone bone=bones.get(i);
             Matrix matrix=new Quaternion(bone.vrot[1], bone.vrot[2], bone.vrot[3],bone.vrot[0]).getRotationMatrix();
             matrix.translate(bone.vpos[0], bone.vpos[1],bone.vpos[2]);
@@ -80,7 +80,7 @@ public class Skc2Jbx {
             }
             bone.JueDuiJuZhen =matrix;
         }
-        for(int i=0;i< jmd.bones.length;i++){///静态处理成本地坐标空间
+        for(int i=0;i< jmd.bones.length;i++){///闈欐�佸鐞嗘垚鏈湴鍧愭爣绌洪棿
             int veri = i*3;
             SimpleVector vertex =new SimpleVector(jmd.verts[veri],jmd.verts[veri +1],jmd.verts[veri+2]);
             vertex.matMul(bones.get((int)jmd.bones[i]).JueDuiJuZhen.invert());

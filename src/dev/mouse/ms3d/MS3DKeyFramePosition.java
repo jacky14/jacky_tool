@@ -6,15 +6,15 @@ import dev.mouse.io.LittleEndianInputStream;
 import dev.mouse.lib.Vector3f;
 
 /**
- * ¹Ø½Ú¹Ø¼üÖ¡Î»ÖÃĞÅÏ¢
+ * å…³èŠ‚å…³é”®å¸§ä½ç½®ä¿¡æ¯
  * @author DEVILIVED
  *
  */
 public class MS3DKeyFramePosition {
 	
-	public float time;				//Ê±¼ä
+	public float time;				//æ—¶é—´
 	
-	private Vector3f position;		//Î»ÖÃ×ø±ê
+	private Vector3f position;		//ä½ç½®åæ ‡
 
 	private MS3DKeyFramePosition() {}
 	

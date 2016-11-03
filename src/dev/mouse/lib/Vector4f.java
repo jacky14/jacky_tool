@@ -2,7 +2,7 @@ package dev.mouse.lib;
 
 
 /**
- * Æë´Î×ø±ê
+ * é½æ¬¡åæ ‡
  * @author DEVILIVED
  *
  */
@@ -11,15 +11,15 @@ public class Vector4f {
 	private float[] coording = new float[4];
 	
 	/**
-	 * ÉèÖÃ
-	 * @param v 3f×ø±ê
+	 * è®¾ç½®
+	 * @param v 3fåæ ‡
 	 */
 	public final void set(Vector3f v) {
 		this.set(v.getVector3fArray());
 	}
 	
 	/**
-	 * ÉèÖÃ
+	 * è®¾ç½®
 	 * @param coording3f
 	 */
 	public final void set(float[] coording3f) {
@@ -27,9 +27,9 @@ public class Vector4f {
 	}
 	
 	/**
-	 * Ëã·¨ÕÕ³­±ğÈËµÄ£¬¾ßÌå²»ÖªµÀÎªºÎÈç´Ë¼ÆËã
-	 * ÉèÖÃ
-	 * @param coording3f 3f×ø±êÊı×é
+	 * ç®—æ³•ç…§æŠ„åˆ«äººçš„ï¼Œå…·ä½“ä¸çŸ¥é“ä¸ºä½•å¦‚æ­¤è®¡ç®—
+	 * è®¾ç½®
+	 * @param coording3f 3fåæ ‡æ•°ç»„
 	 */
 	public final void set(float x, float y, float z) {
 		float angle = 0.0f;
@@ -52,7 +52,7 @@ public class Vector4f {
 	}
 	
 	/**
-	 * ÕÕ³­±ğÈËËã·¨
+	 * ç…§æŠ„åˆ«äººç®—æ³•
 	 * @param q1
 	 * @param q2
 	 * @param alpha
@@ -93,8 +93,8 @@ public class Vector4f {
     }
 	
 	/**
-	 * ÉèÖÃ
-	 * @param v 4f×ø±ê
+	 * è®¾ç½®
+	 * @param v 4fåæ ‡
 	 */
 	public final void set(Vector4f v) {
 		for(int i=0; i<4; i++)
@@ -102,7 +102,7 @@ public class Vector4f {
 	}
 	
 	/**
-	 * »ñµÃ×ø±êÊı×é
+	 * è·å¾—åæ ‡æ•°ç»„
 	 * @return
 	 */
 	public final float[] getVector4fArray() {

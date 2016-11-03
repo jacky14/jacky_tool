@@ -7,25 +7,25 @@ import dev.mouse.lib.Vector3f;
 
 
 /**
- * Èı½ÇĞÎ
+ * ä¸‰è§’å½¢
  * @author DEVILIVED
  *
  */
 public class MS3DTriangle {
 	
-	private int flag;			//ÎŞÓÃ
+	private int flag;			//æ— ç”¨
 	
-	private int[] indexs;		//Ë÷ÒıĞòºÅ 
+	private int[] indexs;		//ç´¢å¼•åºå· 
 	
-	private Vector3f[] normals;	//3¸ö¶¥µã·¨ÏßÏòÁ¿
+	private Vector3f[] normals;	//3ä¸ªé¡¶ç‚¹æ³•çº¿å‘é‡
 	
-	private Vector3f s;			//Ó¦¸ÃÊÇUV×ø±êµÄx
+	private Vector3f s;			//åº”è¯¥æ˜¯UVåæ ‡çš„x
 	
-	private Vector3f t;			//Ó¦¸ÃÊÇUV×ø±êµÄy
+	private Vector3f t;			//åº”è¯¥æ˜¯UVåæ ‡çš„y
 	
-	private byte smoothingGroup; //Õâ¸ö²»ÖªµÀÉñÂíÓÃ´¦
+	private byte smoothingGroup; //è¿™ä¸ªä¸çŸ¥é“ç¥é©¬ç”¨å¤„
 	
-	private byte groupIndex;	//¾ÍÊÇ²»ÖªµÀÁË(¡Ño¡Ñ)
+	private byte groupIndex;	//å°±æ˜¯ä¸çŸ¥é“äº†(âŠ™oâŠ™)
 	
 	private MS3DTriangle() {}
 

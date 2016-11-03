@@ -12,18 +12,18 @@ import java.util.List;
 public class ObjFileUtile {
 
     /**
-     * 顶点数据
+     * 椤剁偣鏁版嵁
      */
     public float[] vex;
     public String strvex = "v ";
     /**
-     * 纹理数据
+     * 绾圭悊鏁版嵁
      */
     public float[] uv;
     public String struv = "vt ";
 
     /**
-     * 索引数据
+     * 绱㈠紩鏁版嵁
      */
     public int[] indexs;
     public String strindex = "f ";

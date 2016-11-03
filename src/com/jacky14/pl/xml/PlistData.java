@@ -50,10 +50,10 @@ public class PlistData {
         System.out.println(Math.abs(ewr)- ((int)Math.abs(ewr)) );
     }
     /**
-     * ÎÆÀí×ø±ê×ª»»
-     * @param key ¶ÔÓ¦µÄÎÆÀíÌùÍ¼Ãû³Æ
-     * @param psource Ô­ÎÆÀí×ø±ê  0==s ,1==t
-     * @return ·µ»Ø×ª»»ºóÎÆÀí×ø±ê 0==s£¬1==t
+     * çº¹ç†åæ ‡è½¬æ¢
+     * @param key å¯¹åº”çš„çº¹ç†è´´å›¾åç§°
+     * @param psource åŸçº¹ç†åæ ‡  0==s ,1==t
+     * @return è¿”å›è½¬æ¢åçº¹ç†åæ ‡ 0==sï¼Œ1==t
      */
     public float[] transition(String key,float [] psource){
         Frame fm =  frames.get(key);
@@ -64,8 +64,8 @@ public class PlistData {
         
         float[] fd = new float[2];
 
-        //ÏÈ¼ÆËã³ö¸Ãuv×ø±êÔÚÔ­Í¼ÖĞ¶ÔÓ¦µÄÏñËØµã×ø±êÎªÁË¾«È·Ê¹ÓÃfloat£¨fm.sourceSize[0] * psource[0]£©£¬
-        // ÔÚ+ÉÏÔÚĞÂ´óÍ¼ÖĞÆğµãÎ»ÖÃ
+        //å…ˆè®¡ç®—å‡ºè¯¥uvåæ ‡åœ¨åŸå›¾ä¸­å¯¹åº”çš„åƒç´ ç‚¹åæ ‡ä¸ºäº†ç²¾ç¡®ä½¿ç”¨floatï¼ˆfm.sourceSize[0] * psource[0]ï¼‰ï¼Œ
+        // åœ¨+ä¸Šåœ¨æ–°å¤§å›¾ä¸­èµ·ç‚¹ä½ç½®
         /*if( psource[0]<0|| psource[0]>1){
             psource[0] = Math.abs(psource[0])- ((int)Math.abs(psource[0]));
         }
@@ -73,7 +73,7 @@ public class PlistData {
             psource[1] = Math.abs(psource[1])- ((int)Math.abs(psource[1]));
         }*/
 
-        //²âÊÔ
+        //æµ‹è¯•
        /* fd[0] = psource[0];
         fd[1] = psource[1];*/
 
@@ -82,7 +82,7 @@ public class PlistData {
         float dx = fm.sourceSize[0] * psource[0] + fm.frame[0][0];
         float dy = fm.sourceSize[1] * psource[1] + fm.frame[0][1];
 
-        //ÓÉÉÏÃæµÃµ½µ±Ç°µãÔÚ´óÍ¼ÖĞÎ»ÖÃ¼ÆËãĞÂµÄ uv ×ø±ê
+        //ç”±ä¸Šé¢å¾—åˆ°å½“å‰ç‚¹åœ¨å¤§å›¾ä¸­ä½ç½®è®¡ç®—æ–°çš„ uv åæ ‡
         fd[0] = dx / size[0];
         fd[1] =dy / size[1] ;
 
@@ -95,7 +95,7 @@ public class PlistData {
 
         StringBuffer plstsb = new StringBuffer();
         String str;
-        int skipline = 0;//Ìø¹ıplist Ç°Á½ĞĞÎÄ±¾£¬dom4j½âÎöxml±ØĞëÓĞ¸ù½Úµã
+        int skipline = 0;//è·³è¿‡plist å‰ä¸¤è¡Œæ–‡æœ¬ï¼Œdom4jè§£æxmlå¿…é¡»æœ‰æ ¹èŠ‚ç‚¹
         while ((str = bf.readLine()) != null) {
             if (skipline < 2) {
                 skipline++;
@@ -109,7 +109,7 @@ public class PlistData {
 
         Element root = document.getRootElement();
 
-        //»ñµÃ¸ù½Úµã
+        //è·å¾—æ ¹èŠ‚ç‚¹
         Element rootDict = root.element(DICT);
 
         boolean IsFrames = false;
@@ -119,7 +119,7 @@ public class PlistData {
             Element element = (Element) it.next();
             if (IsFrames) {
                 if (DICT.equals(element.getName())) {
-                    //´¦ÀíÖ¡Êı¾İ
+                    //å¤„ç†å¸§æ•°æ®
                     for (Iterator<?> itc = element.elementIterator(); itc.hasNext(); ) {
                         Element c = (Element) itc.next();
                         if (KEY.equals(c.getName())) {
@@ -164,7 +164,7 @@ public class PlistData {
                 continue;
             } else if (IsMetadata) {
                 if (DICT.equals(element.getName())) {
-                    //´¦Àíµ±Ç°¶¯»­ĞÅÏ¢
+                    //å¤„ç†å½“å‰åŠ¨ç”»ä¿¡æ¯
                     for (Iterator<?> itc = element.elementIterator(); itc.hasNext(); ) {
                         Element cc = (Element) itc.next();
                         Element next = (Element) itc.next();
@@ -200,8 +200,8 @@ public class PlistData {
 
 
     /**
-     * £û34£¬34£ı   =  int[] a = new int[]{34,34};
-     * ¸ù¾İ×Ö·û´®»ñµÃÊı×é¶ÔÏó
+     * ï½›34ï¼Œ34ï½   =  int[] a = new int[]{34,34};
+     * æ ¹æ®å­—ç¬¦ä¸²è·å¾—æ•°ç»„å¯¹è±¡
      *
      * @param toStr
      * @return
@@ -217,8 +217,8 @@ public class PlistData {
     }
 
     /**
-     * £û34£¬34£ı   =  int[] a = new int[]{34,34};
-     * ¸ù¾İ×Ö·û´®»ñµÃÊı×é¶ÔÏó
+     * ï½›34ï¼Œ34ï½   =  int[] a = new int[]{34,34};
+     * æ ¹æ®å­—ç¬¦ä¸²è·å¾—æ•°ç»„å¯¹è±¡
      *
      * @param toStr
      * @return
@@ -234,7 +234,7 @@ public class PlistData {
     }
 
     /**
-     * ¸ù¾İ×Ö·û´®·µ»Ø2Î¬Êı×é {{830,366},{102,162}}
+     * æ ¹æ®å­—ç¬¦ä¸²è¿”å›2ç»´æ•°ç»„ {{830,366},{102,162}}
      *
      * @param toStr
      * @return
@@ -256,39 +256,39 @@ public class PlistData {
     public String lastKey;
 
     /**
-     * Ö¡ĞÅÏ¢
+     * å¸§ä¿¡æ¯
      */
     //public List<Frame> frames = new ArrayList<Frame>();
     public HashMap<String,Frame>  frames = new HashMap<String,Frame>();
     /**
-     * Àı£º
+     * ä¾‹ï¼š
      * <key>format</key>
      * <integer>2</integer>
      */
     public int format;
     /**
-     * Àı£º
+     * ä¾‹ï¼š
      * <key>realTextureFileName</key>
      * <string>1003_role.png</string>
      */
     public String realTextureFileName;
 
     /**
-     * Àı£º
+     * ä¾‹ï¼š
      * <key>size</key>
      * <string>{1024,2048}</string>
      */
     public int[] size;
 
     /**
-     * Àı£º
+     * ä¾‹ï¼š
      * <key>smart update</key>
      * <string>$TexturePacker:SmartUpdate:80b524f806ac49025ed256bea7a83b86:1/1$</string>
      */
     public String smartupdate;
 
     /**
-     * Àı£º
+     * ä¾‹ï¼š
      * <key>textureFileName</key>
      * <string>1003_role.png</string>
      */

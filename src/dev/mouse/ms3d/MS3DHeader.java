@@ -4,7 +4,7 @@ import java.io.IOException;
 
 import dev.mouse.io.LittleEndianInputStream;
 /**
- * MS3DÎÄ¼şÍ·ĞÅÏ¢
+ * MS3Dæ–‡ä»¶å¤´ä¿¡æ¯
  * @author DEVILIVED
  *
  */
@@ -19,7 +19,7 @@ public class MS3DHeader {
 		this.version = version;
 	}
 	/**
-	 * »ñÈ¡°æ±¾ĞÅÏ¢
+	 * è·å–ç‰ˆæœ¬ä¿¡æ¯
 	 * @param is
 	 * @return
 	 * @throws IOException

@@ -12,6 +12,6 @@ public class MyClock {
     }
 
     public void showtime(){
-        System.out.println("¾­ÀúµÄºÁÃëÊı£º"+ (System.currentTimeMillis() - start));
+        System.out.println("ç»å†çš„æ¯«ç§’æ•°ï¼š"+ (System.currentTimeMillis() - start));
     }
 }
