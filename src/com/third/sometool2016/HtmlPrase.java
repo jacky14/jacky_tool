@@ -1,4 +1,4 @@
-package com.com.third.sometool2016;
+package com.third.sometool2016;
 
 import com.third.sometool2015.FileFindUtil;
 import org.dom4j.Document;
