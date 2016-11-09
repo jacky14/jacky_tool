@@ -18,17 +18,6 @@ public class TexGBK2UTF {
         List<File> files = FileFindUtil.select(source);
         for(int i=0;i<files.size();i++){
 
-            if("Ms3dRead.java".equals(files.get(i).getName())){
-                System.out.print("asdf");
-
-            }
-            StringBuffer sb = new StringBuffer();
-            Scanner sc = new Scanner(files.get(i));
-
-            while(sc.hasNext()){
-                sb.append(sc.nextLine() + "\r\n");
-            }
-            sc.close();
             String aaaa=getTextFromText(files.get(i));
 
 
