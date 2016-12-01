@@ -11,7 +11,7 @@ import java.util.Scanner;
  */
 public class TexGBK2UTF {
 
-    public static String source = "G:\\jacky_tool.git\\trunk\\src";
+    public static String source = "C:\\Users\\Administrator\\Desktop\\aaa";
     public static String outpath = "C:\\Users\\Administrator\\Desktop\\src";
     public static void main(String [] args) throws IOException {
         FileFindUtil.houzui = "";

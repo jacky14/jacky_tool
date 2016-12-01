@@ -13,8 +13,8 @@ import java.util.List;
  * Created by Administrator on 2016/11/9.
  */
 public class Ser2Obj {
-    public static String srcpath = "D:\\Ñ¸À×ÏÂÔØ\\com.xiaoao.riskSnipe\\assets\\Scene\\Chuan";
-    public static String outpath = "C:\\Users\\Administrator\\Desktop\\map";
+    public static String srcpath = "D:\\Ñ¸À×ÏÂÔØ\\com.xiaoao.riskSnipe\\assets\\Scene\\SM";
+    public static String outpath = "C:\\Users\\Administrator\\Desktop\\SM";
 
     public static void main(String [] args) throws Exception {
         FileFindUtil.houzui = ".ser";

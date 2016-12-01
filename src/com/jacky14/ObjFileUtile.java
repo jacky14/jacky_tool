@@ -111,7 +111,7 @@ public class ObjFileUtile {
         //ObjFileUtile u = new ObjFileUtile(ld.vertex,ld.texture,ld.index);
         //u.save("C:\\Users\\Administrator\\Desktop\\tmp\\");
 
-
+System.out.println();
      }
 
 
