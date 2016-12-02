@@ -1,0 +1,3 @@
+http://central.maven.org/maven2/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar
+http://central.maven.org/maven2/com/alibaba/fastjson/1.2.21/fastjson-1.2.21.jar
+http://www.jpct.de/download/net/jpctapi.zip
