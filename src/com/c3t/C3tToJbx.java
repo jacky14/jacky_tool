@@ -59,7 +59,19 @@ public class C3tToJbx {
             listver.add(tmpver);
         }
 
+        JSONArray idx = mesh.getJSONArray("parts").getJSONObject(0).getJSONArray("indices");
+        versize =  idx.size()/3;
 
+
+        List<TrgIdx> lss = new ArrayList<>();
+        for(int i=0;i<versize;i++){
+            TrgIdx ti = new TrgIdx();
+            int bidx = i*3;
+            ti.x = idx.getInteger(bidx);
+            ti.y = idx.getInteger(bidx + 1);
+            ti.z = idx.getInteger(bidx + 2);
+            lss.add(ti);
+        }
 
 
 
