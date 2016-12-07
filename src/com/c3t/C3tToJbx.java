@@ -4,6 +4,8 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 
+import com.jacky.engine.math.Matrix4f;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.util.ArrayList;
@@ -73,6 +75,20 @@ public class C3tToJbx {
             lss.add(ti);
         }
 
+        List<Bone> bones = new ArrayList<>();
+        JSONArray jaay =  jobj.getJSONArray("nodes").getJSONObject(0).getJSONArray("parts").getJSONObject(0).getJSONArray("bones");
+        for(int i=0;i<jaay.size();i++){
+            JSONObject obj =   jaay.getJSONObject(i);
+
+            JSONArray max =  obj.getJSONArray("transform");
+            Bone bone = new Bone();
+            bone.name = obj.getString("node");
+
+            for(int j=0;j<max.size();j++){
+                bone.m4f_jdjz.matrix[j] = max.getFloat(j);
+            }
+            bones.add(bone);
+        }
 
 
         System.out.println("asdf");
