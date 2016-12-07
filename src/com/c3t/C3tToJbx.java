@@ -9,6 +9,7 @@ import com.jacky.engine.math.Matrix4f;
 import java.io.File;
 import java.io.FileInputStream;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -76,22 +77,47 @@ public class C3tToJbx {
         }
 
         List<Bone> bones = new ArrayList<>();
-        JSONArray jaay =  jobj.getJSONArray("nodes").getJSONObject(0).getJSONArray("parts").getJSONObject(0).getJSONArray("bones");
-        for(int i=0;i<jaay.size();i++){
-            JSONObject obj =   jaay.getJSONObject(i);
+        java.util.Map<String,Bone> sbs = new HashMap<>();
+        JSONArray jaay =  jobj.getJSONArray("nodes");
+
+        if(jaay.size()>2){
+            System.out.println("骨骼数据过多！！请检查");
+            return;
+        }
+        JSONArray dsfsdfsd =  jaay.getJSONObject(0).getJSONArray("parts").getJSONObject(0).getJSONArray("bones");
+        for(int j=0;j<dsfsdfsd.size();j++){
+            JSONObject obj =   dsfsdfsd.getJSONObject(j);
 
             JSONArray max =  obj.getJSONArray("transform");
             Bone bone = new Bone();
             bone.name = obj.getString("node");
+            bone.m4f_jdjz = jarr2mat(max);
 
-            for(int j=0;j<max.size();j++){
-                bone.m4f_jdjz.matrix[j] = max.getFloat(j);
-            }
             bones.add(bone);
         }
 
+         JSONObject boneobj =    jaay.getJSONObject(1);
+
+
+
+
+
 
         System.out.println("asdf");
+    }
+    private static Matrix4f jarr2mat(JSONArray ja){
+        Matrix4f m = new Matrix4f();
+        for(int k=0;k<ja.size();k++){
+            m.matrix[k] = ja.getFloat(k);
+        }
+        return m;
+    }
+
+    private void bl(JSONObject jobj){
+        String id = jobj.getString("id");
+        Matrix4f m4f = jarr2mat(jobj.getJSONArray("transform"));
+
+
     }
     private static int f2i(float f){
         return (int)f;
